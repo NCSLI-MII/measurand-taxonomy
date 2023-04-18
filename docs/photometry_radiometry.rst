@@ -1,20 +1,20 @@
 Photometry and Radiometry
 -------------------------
 
-+--------------------------------------------------+--------------------+
-|name                                              |discipline          |
-+==================================================+====================+
-|Measure.Ratio.Radiance.Spectral                   |Photometry          |
-+--------------------------------------------------+--------------------+
-|Measure.Ratio.Radiance.Spectral.Total             |Photometry          |
-+--------------------------------------------------+--------------------+
-|Measure.LuminousFlux                              |                    |
-+--------------------------------------------------+--------------------+
-|Measure.LuminousIntensity                         |Photometry          |
-+--------------------------------------------------+--------------------+
-|Measure.Radiance.Spectral                         |Photometry          |
-+--------------------------------------------------+--------------------+
-|Measure.Reflectance.Regular.Spectral              |Photometry          |
-+--------------------------------------------------+--------------------+
-|Measure.Transmittance.Regular.Spectral            |Photometry          |
-+--------------------------------------------------+--------------------+
++--------------------------------------------------+--------------------+----------------------------+
+|name                                              |discipline          |nonmenclature               |
++==================================================+====================+============================+
+|Measure.Ratio.RadiantFlux.Reflectance.Specular    |Photometry          |Regular reflectance factor  |
++--------------------------------------------------+--------------------+----------------------------+
+|Measure.Ratio.RadiantFlux.Reflectance.Diffuse     |Photometry          |Diffuse reflectance factor  |
++--------------------------------------------------+--------------------+----------------------------+
+|Measure.Ratio.LuminousFlux                        |Photometry          |Luminous flux               |
++--------------------------------------------------+--------------------+----------------------------+
+|Measure.LuminousIntensity                         |Photometry          |Luminous intensity          |
++--------------------------------------------------+--------------------+----------------------------+
+|Measure.Ratio.Radiance.Bidirectional              |Photometry          |Radiance factor             |
++--------------------------------------------------+--------------------+----------------------------+
+|Measure.Ratio.RadiantFlux.Transmittance.Specular  |Photometry          |Regular transmittance factor|
++--------------------------------------------------+--------------------+----------------------------+
+|Measure.Ratio.Radiance.Delta.Angle                |Photometry          |Gloss                       |
++--------------------------------------------------+--------------------+----------------------------+
