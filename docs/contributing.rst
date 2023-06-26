@@ -1,10 +1,5 @@
-# Measurand Taxonomy
-NCSLI MII Measurand Taxonomy Catalog
-
-## Contributing
-See the complete [contribution guidelines for this project](docs/contributing.rst).
-
-### Guide for measurement-domain experts
+Contribution Guide for Measurement-Domain Experts
+=================================================
 
 As part of the effort to digitalize the international quality infrastructure, 
 NCSLI has begun developing a measurand taxonomy for use in identifying measurement 
@@ -23,17 +18,18 @@ Example taxons:
 
 The taxons include additional tokens as required to fully differentiate measurands from each other. 
 So, the taxonomy has structure such as:
-```
+``
     Measure.Pressure.Hydraulic.Static
     Measure.Pressure.Pneumatic.Absolute.Static
     Measure.Pressure.Pneumatic.Absolute.Dynamic
     Measure.Pressure.Pneumatic.Differential.Static
     Measure.Pressure.Pneumatic.Gage.Static
-```
+``
 A collaborative GitHub site (https://github.com/NCSLI-MII/measurand-taxonomy) contains the latest reference taxonomy and a draft specification document describing taxon-construction details.
 
 Metrologists from NMIs, Consultative Committees (CCs) and other organizations may contribute by helping to expand and disambiguate the taxonomy in their expertise areas and to cover the measurement services in their particular area of interest, such as those governed in a specific CC, an NMI's measurement offerings, etc. An initial contribution might develop, expand, or refine a measurement area's taxonomy such as that for length:
-```
+
+``
     Measure.Length
     Measure.Length.Circumference
     Measure.Length.Diameter
@@ -46,7 +42,8 @@ Metrologists from NMIs, Consultative Committees (CCs) and other organizations ma
     Measure.Length.Form.Straightness.Axis
     Measure.Length.Form.Straightness.Surface
     Measure.Length.Radius
-```
+``
+
 A second contribution level involves associating parameters with taxons. 
 Measurands typically require parameters (input or influence quantities, operating conditions and other qualifiers) to fully specify the measurement. When assigned values (or ranges of values), the parameters aid in properly matching requirements, specifications, capabilities, and measurement results. In CMCs, the parameters specify over what measurement space the CMC uncertainty remains valid. In In certificates the parameters fully specify the conditions under which the laboratory obtained the measured result. In specifications, the parameters detail the quantity and condition ranges over which the specification remains valid.
 
@@ -55,7 +52,7 @@ Whereas a lower level laboratory's wide CMC uncertainty may require specifying f
 the highest-level NMI measurements typically require a larger parameters set to obtain the tightest uncertainty. 
 Domain experts may perhaps contribute the most value at this level. 
 So, for example, an air-flow taxon example may have the following parameters, many of which a lower-level laboratory would not consider:
-```
+``
     Source.MassFlowRate.Gas
         Required Parameters
             Mass flow rate
@@ -75,25 +72,5 @@ So, for example, an air-flow taxon example may have the following parameters, ma
             Outlet Pressure
             Reynolds Number
             Gas Velocity
-```
+``
 In the long run, the NCSLI 141 Measurement Information infrastructure and Automation Committee will govern taxonomy development primarily through the GitHub site (under construction) and tools therein. Participants may submit new taxons, corrections, et al. via GitHub issues. Until the GitHub site becomes public, contributors may bring submissions and questions to the regular Monday working meeting (1 pm US Mountain Time, https://app.gotomeeting.com/?meetingId=909871373). Organizations and individuals may also join NCSLI (https://www.ncsli.org/) and participate on the committee.
-
-## Transformation
-
-To generate a html from the xml source, use xsltproc
-```
-xsltproc -o MeasurandTaxonomyCatalog.html MeasurandTaxonomyCatalog.xsl MeasurandTaxonomyCatalog.xml
-```
-
-Copyright © 2023 by NCSL International. All rights reserved
-
-Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
-
-This work is licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by].
-
-[![CC BY 4.0][cc-by-image]][cc-by]
-
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
