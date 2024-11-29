@@ -22,6 +22,11 @@
   <mtc:Parameter name="UUT.Input" optional="true">
     <mtc:Definition>Input Name of the UUT Connecting Point</mtc:Definition>
   </mtc:Parameter>
+  <mtc:Parameter name="Temperature" optional="true>
+    <uom:Quantity name="temperature" />
+  </mtc:Parameter>
+  <mtc:Parameter name="Ratio.Humidity.Relative" optional="true"/>
+  <mtc:Paramter name="Current.DC.Input" optional="true />
   <mtc:Discipline name="Electrical" />
   <mtc:Definition>This test process measures the DC (Direct Current) voltage sourced from the UUT.</mtc:Definition>
 </Taxon>
