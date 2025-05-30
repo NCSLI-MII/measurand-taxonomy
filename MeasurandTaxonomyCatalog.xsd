@@ -21,63 +21,68 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0" vc:maxVersion="1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:uom="https://raw.githubusercontent.com/NCSLI-MII/measurand-taxonomy/main/UOM_Database.xml"
-    xmlns:mtc="https://raw.githubusercontent.com/NCSLI-MII/measurand-taxonomy/main/MeasurandTaxonomyCatalog.xml"
+    xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database"
+    xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog"
     elementFormDefault="qualified" attributeFormDefault="unqualified"
-    targetNamespace="https://raw.githubusercontent.com/NCSLI-MII/measurand-taxonomy/main/MeasurandTaxonomyCatalog"
-    >
+    targetNamespace="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog">
     
-    <xs:import namespace="https://raw.githubusercontent.com/NCSLI-MII/measurand-taxonomy/main/UOM_Database"
-        schemaLocation="https://raw.githubusercontent.com/NCSLI-MII/measurand-taxonomy/main/UOM_Database.xsd"
-		/>
+    <xs:import namespace="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database" schemaLocation="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database.xsd"/>
 
     <xs:element name="Taxonomy">
         <xs:complexType>
             <xs:sequence>
                 <xs:element maxOccurs="unbounded" ref="mtc:Taxon"/>
-            </xs:sequence>           
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 
     <xs:element name="mLayer">
+      <xs:complexType>
+        <xs:sequence>
+        </xs:sequence>
         <xs:attribute name="aspect" type="xs:Name" use="required"/>
         <xs:attribute name="id" type="xs:Name" use="required"/>
+      </xs:complexType>
     </xs:element>
-    
-	<!-- The "quantityCodeSystemType" is from the 
+
+  <!-- The "quantityCodeSystemType" is from the 
 	     https://github.com/TC-IM-1448/DCC-Tables/blob/main/dcx.xsd
 		 When this library is complete Reference should be syncronized with the 
 		 work done by DCC-Tables (DCX)
-	-->
-    <xs:simpleType name="quantityCodeSystemType">
-        <xs:annotation>
-            <xs:documentation>
-            </xs:documentation>
-        </xs:annotation>
-            <xs:restriction base="xs:string">
-                <xs:enumeration value="ISO/IEC 80000" /> 
-                <xs:enumeration value="si-digital-framework.org" /> 
-                <xs:enumeration value="electropedia.org"/>
-                <xs:enumeration value="mlayer.org" /> 
-                <xs:enumeration value="qudt.org" /> 
-                <xs:enumeration value="ucum.org" /> 
-                <xs:enumeration value="ptb.de" /> 
-                <xs:enumeration value="other" /> 
-            </xs:restriction>
-    </xs:simpleType>
-	
-    <xs:element name="ExternalQuantityType">
-        <xs:attribute name="quantityName" type="xs:string" minOccurs="0" maxOccurs="0"/>
+  -->
+     <xs:simpleType name="quantityCodeSystemType">
+          <xs:annotation>
+              <xs:documentation>
+              </xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string">
+              <xs:enumeration value="ISO/IEC 80000" /> 
+              <xs:enumeration value="si-digital-framework.org" /> 
+              <xs:enumeration value="electropedia.org"/>
+              <xs:enumeration value="mlayer.org" /> 
+              <xs:enumeration value="qudt.org" /> 
+              <xs:enumeration value="ucum.org" /> 
+              <xs:enumeration value="ptb.de" /> 
+              <xs:enumeration value="other" /> 
+          </xs:restriction>
+      </xs:simpleType>
+
+  <xs:element name="ExternalQuantityType">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="quantityCodeSystem" type="mtc:quantityCodeSystemType" minOccurs="0" maxOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="quantityName" type="xs:string" use="required"/>
         <xs:attribute name="quantityCode" type="xs:string" use="required"/>
-        <xs:element name="quantityCodeSystem" type="quantityCodeSystemType" />
-    </xs:element>
-    
-    <xs:element name="Result">
+      </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Result">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="uom:Quantity" maxOccurs="1" minOccurs="0"/>
-				<xs:element ref="mLayer" maxOccurs="1" minOccurs="0"/>
-				<xs:element ref="ExternalQuantityType"  minOccurs="0"/>
+              <xs:element ref="uom:Quantity" maxOccurs="1" minOccurs="0"/>
+              <xs:element ref="mtc:mLayer" maxOccurs="1" minOccurs="0"/>
+              <xs:element ref="mtc:ExternalQuantityType"  minOccurs="0"/>
             </xs:sequence>
             <xs:attribute name="name" type="xs:Name" use="optional"/>
         </xs:complexType>
@@ -88,15 +93,15 @@
             <xs:sequence>
                 <xs:element name="Definition" type="xs:string" minOccurs="0"/>
                 <xs:element ref="uom:Quantity" maxOccurs="1" minOccurs="0"/>
-				<xs:element ref="mLayer" maxOccurs="1" minOccurs="0" />
-				<xs:element ref="ExternalQuantityType" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="mtc:mLayer" maxOccurs="1" minOccurs="0" />
+                <xs:element ref="mtc:ExternalQuantityType" maxOccurs="1" minOccurs="0"/>
             </xs:sequence>            
             <xs:attribute name="name" type="xs:Name" use="required"/>
             <xs:attribute default="false" name="optional" type="xs:boolean"/>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="ExternalReferences">
+  <xs:element name="ExternalReferences">
       <xs:complexType>
         <xs:sequence>
           <xs:element minOccurs="1" ref="mtc:Reference" />
@@ -108,7 +113,7 @@
       <xs:complexType>
         <xs:sequence>
           <xs:element minOccurs="0" ref="mtc:CategoryTag" />
-          <xs:element minOccurs="1" ref="mtc:ReferenceUrl" />
+          <xs:element  minOccurs="1" ref="mtc:ReferenceUrl" />
         </xs:sequence>
       </xs:complexType>
     </xs:element>
