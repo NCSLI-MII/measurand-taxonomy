@@ -1,36 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Conductivity" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Conductivity">
-    <uom:Quantity name="conductivity" />
-  </mtc:Result>
-  <mtc:Parameter name="Conductivity" optional="false">
-    <uom:Quantity name="conductivity" />
-    <mtc:Definition>Conductivity to be measured</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Distance" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Length between nodes</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Volts" optional="true">
-    <uom:Quantity name="voltage" />
-    <mtc:Definition>Voltage between the probes</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Amps" optional="true">
-    <uom:Quantity name="current" />
-    <mtc:Definition>Electrical Current Expected</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Temperature " optional="true">
-    <uom:Quantity name="temperature" />
-    <mtc:Definition>usually 20 ?C</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Chemical" />
-  <mtc:Definition>The process of measuring the Electrical Conductivity of a Solution or a device.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Conductivity" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="conductivity"></uom:Quantity>
+		<mtc:mLayer aspect="as_conductivity" id="AS91"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Conductivity" optional="false">
+		<mtc:Definition>Conductivity to be measured</mtc:Definition>
+		<uom:Quantity name="conductivity"></uom:Quantity>
+		<mtc:mLayer aspect="as_conductivity" id="AS91"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Distance" optional="true">
+		<mtc:Definition>Length between nodes</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Volts" optional="true">
+		<mtc:Definition>Voltage between the probes</mtc:Definition>
+		<uom:Quantity name="voltage"></uom:Quantity>
+		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Amps" optional="true">
+		<mtc:Definition>Electrical Current Expected</mtc:Definition>
+		<uom:Quantity name="current"></uom:Quantity>
+		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Temperature" optional="true">
+		<mtc:Definition>usually 20 °C</mtc:Definition>
+		<uom:Quantity name="temperature"></uom:Quantity>
+		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS6"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Discipline name="Chemical"></mtc:Discipline>
+	<mtc:Definition>The process of measuring the Electrical Conductivity of a Solution or a device.</mtc:Definition>
 </Taxon>

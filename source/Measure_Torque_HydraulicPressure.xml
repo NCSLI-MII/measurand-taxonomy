@@ -1,30 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Torque.HydraulicPressure" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Torque">
-    <uom:Quantity name="torque" />
-  </mtc:Result>
-  <mtc:Parameter name="Torque" optional="false">
-    <uom:Quantity name="torque" />
-    <mtc:Definition>The expected torque output</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Pressure" optional="false">
-    <uom:Quantity name="pressure" />
-    <mtc:Definition>The applied hydraulic pressure</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Direction" optional="true">
-    <mtc:Definition>{CW, CCW}</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Connector" optional="true">
-    <mtc:Definition>Connector Name [Text]</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Torque" />
-  <mtc:Definition>A test process that measures the accuracy of hydraulic torque wrenches where hydraulic pressure is applied to the torque wrench and it applies a known torque to the nut or bolt being tightened. This process usually is used to calibrate hydraulic torque wrenches producing a lookup sheet the operator can use to quickly look up the pressure required to correctly torque the bolt or nut.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Torque.HydraulicPressure" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="torque"></uom:Quantity>
+	</mtc:Result>
+	<mtc:Parameter name="Torque" optional="false">
+		<mtc:Definition>The expected torque output</mtc:Definition>
+		<uom:Quantity name="torque"></uom:Quantity>
+	</mtc:Parameter>
+	<mtc:Parameter name="Pressure" optional="false">
+		<mtc:Definition>The applied hydraulic pressure</mtc:Definition>
+		<uom:Quantity name="pressure"></uom:Quantity>
+		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Direction" optional="true">
+		<mtc:Definition>{CW, CCW}</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Connector" optional="true">
+		<mtc:Definition>Connector Name [Text]</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Discipline name="Torque"></mtc:Discipline>
+	<mtc:Definition>A test process that measures the accuracy of hydraulic torque wrenches where hydraulic pressure is applied to the torque wrench and it applies a known torque to the nut or bolt being tightened. This process usually is used to calibrate hydraulic torque wrenches producing a lookup sheet the operator can use to quickly look up the pressure required to correctly torque the bolt or nut.</mtc:Definition>
 </Taxon>

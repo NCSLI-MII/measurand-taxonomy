@@ -1,28 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Power.RF.Sinewave" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Power">
-    <uom:Quantity name="power" />
-  </mtc:Result>
-  <mtc:Parameter name="Frequency" optional="false">
-    <uom:Quantity name="frequency" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="Power" optional="false">
-    <uom:Quantity name="power" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="Impedance" optional="true">
-    <uom:Quantity name="impedance" />
-    <mtc:Definition>Expected measurement Impedance</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Electrical" />
-  <mtc:Definition>A test process that measures the RF power of a signal.  It can be either direct or monitored by an RF Power measurement device</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Power.RF.Sinewave" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="power"></uom:Quantity>
+		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Frequency" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Power" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="power"></uom:Quantity>
+		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Impedance" optional="true">
+		<mtc:Definition>Expected measurement Impedance</mtc:Definition>
+		<uom:Quantity name="impedance"></uom:Quantity>
+	</mtc:Parameter>
+	<mtc:Discipline name="Electrical"></mtc:Discipline>
+	<mtc:Definition>A test process that measures the RF power of a signal.  It can be either direct or monitored by an RF Power measurement device</mtc:Definition>
 </Taxon>

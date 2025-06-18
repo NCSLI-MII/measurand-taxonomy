@@ -1,40 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Source.Acceleration.Vibration" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Acceleration">
-    <uom:Quantity name="acceleration" />
-  </mtc:Result>
-  <mtc:Parameter name="Acceleration" optional="false">
-    <uom:Quantity name="acceleration" />
-    <mtc:Definition>(m/s? - RMS)</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Frequency" optional="false">
-    <uom:Quantity name="frequency" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="OutputType" optional="false">
-    <mtc:Definition> {Voltage, IEPE, Current, Charge}</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Sensitivity" optional="false">
-    <mtc:Definition>(Output per m/s?)   </mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Axis" optional="true">
-    <mtc:Definition>{X,Y, Z} </mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Position" optional="true">
-    <mtc:Definition>Relative to Gravity</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="ExcitationVoltage" optional="true">
-    <uom:Quantity name="voltage" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Discipline name="Vibration" />
-  <mtc:Definition>UUT is placed in a device, normally a shaker, then the shaker moves in a single access direction at a known acceleration and frequency.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Source.Acceleration.Vibration" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="acceleration"></uom:Quantity>
+		<mtc:mLayer aspect="as_acceleration" id="AS39"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Acceleration" optional="false">
+		<mtc:Definition>(m/s² - RMS)</mtc:Definition>
+		<uom:Quantity name="acceleration"></uom:Quantity>
+		<mtc:mLayer aspect="as_acceleration" id="AS39"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Frequency" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="OutputType" optional="false">
+		<mtc:Definition>{Voltage, IEPE, Current, Charge}</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Sensitivity" optional="false">
+		<mtc:Definition>(Output per m/s²)</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Axis" optional="true">
+		<mtc:Definition>{X,Y, Z}</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Position" optional="true">
+		<mtc:Definition>Relative to Gravity</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="ExcitationVoltage" optional="true">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="voltage"></uom:Quantity>
+		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Discipline name="Vibration"></mtc:Discipline>
+	<mtc:Definition>UUT is placed in a device, normally a shaker, then the shaker moves in a single access direction at a known acceleration and frequency.</mtc:Definition>
 </Taxon>

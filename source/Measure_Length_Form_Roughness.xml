@@ -1,45 +1,43 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Length.Form.Roughness" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Roughness">
-    <uom:Quantity name="length" />
-  </mtc:Result>
-  <mtc:Parameter name="Roughness" optional="false">
-    <mtc:Definition>{Ra, Rq (RMS), Rv, Rp, Rz}</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="StartPointX" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Start Point on the X-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="StartPointY" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Start Point on the Y-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="EndPointY" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>End Point on the Y-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="EndPointX" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>End Point on the X-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Evaluation Method" optional="true">
-    <mtc:Definition>({Ra, Rq (RMS), Rv, Rp, Rz})</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Resolution" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition> x-y distance between points</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Reference" optional="true">
-    <mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Dimensional" />
-  <mtc:Definition>Roughness is the measure of the finer surface irregularities in the surface texture (texture comprises roughness, waviness, and form), either along a profile (line) or across a surface. Form is a long spatial wavelength, or the overall ?shape? of the surface. Waviness is a shorter spatial wavelength, such as an undulation in the shape. Roughness is the shortest spatial wavelength of the surface irregularities. These surface irregularities are results of the manufacturing process employed to create the surface. Roughness is measured, using a numerical parameter, which is a description of the overall roughness of the surface. Roughness average (Ra), sometimes previously known as arithmetic average (AA) or (CLA), both now deprecated,, is the rated as then the is a parameter, calculated as the arithmetic mean deviation of the surface valleys and peaks. Units used are typically in micrometers or microinches. Reference https://www.engineersedge.com/surface_finish.htm https://en.wikipedia.org/wiki/Surface_roughness ASME B46.1.2019</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Length.Form.Roughness" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Roughness" optional="false">
+		<mtc:Definition>{Ra, Rq (RMS), Rv, Rp, Rz}</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="StartPointX" optional="true">
+		<mtc:Definition>Start Point on the X-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="StartPointY" optional="true">
+		<mtc:Definition>Start Point on the Y-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="EndPointY" optional="true">
+		<mtc:Definition>End Point on the Y-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="EndPointX" optional="true">
+		<mtc:Definition>End Point on the X-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="EvaluationMethod" optional="true">
+		<mtc:Definition>({Ra, Rq (RMS), Rv, Rp, Rz})</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Resolution" optional="true">
+		<mtc:Definition>x-y distance between points</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Reference" optional="true">
+		<mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Discipline name="Dimensional"></mtc:Discipline>
+	<mtc:Definition>Roughness is the measure of the finer surface irregularities in the surface texture (texture comprises roughness, waviness, and form), either along a profile (line) or across a surface. Form is a long spatial wavelength, or the overall “shape” of the surface. Waviness is a shorter spatial wavelength, such as an undulation in the shape. Roughness is the shortest spatial wavelength of the surface irregularities. These surface irregularities are results of the manufacturing process employed to create the surface. Roughness is measured, using a numerical parameter, which is a description of the overall roughness of the surface. Roughness average (Ra), sometimes previously known as arithmetic average (AA) or (CLA), both now deprecated,, is the rated as then the is a parameter, calculated as the arithmetic mean deviation of the surface valleys and peaks. Units used are typically in micrometers or microinches. Reference https://www.engineersedge.com/surface_finish.htm https://en.wikipedia.org/wiki/Surface_roughness ASME B46.1.2019</mtc:Definition>
 </Taxon>

@@ -1,29 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Length.Circumference" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Lenght">
-    <uom:Quantity name="length" />
-  </mtc:Result>
-  <mtc:Parameter name="Type" optional="true">
-    <mtc:Definition>{Inside, Outside}</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Position" optional="true">
-    <mtc:Definition>Where is it being measured? [plain text]</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Reference" optional="true">
-    <mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Length" optional="false">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Measured Circumference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Dimensional" />
-  <mtc:Definition>Length Circumference is the length measured around the inside or outside of a round or circular object.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Length.Circumference" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Type" optional="true">
+		<mtc:Definition>{Inside, Outside}</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Position" optional="true">
+		<mtc:Definition>Where is it being measured? [plain text]</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Reference" optional="true">
+		<mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Length" optional="false">
+		<mtc:Definition>Measured Circumference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Discipline name="Dimensional"></mtc:Discipline>
+	<mtc:Definition>Length Circumference is the length measured around the inside or outside of a round or circular object.</mtc:Definition>
 </Taxon>

@@ -1,35 +1,30 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Ratio.Density-Mass" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Ratio">
-    <uom:Quantity name="ratio" />
-  </mtc:Result>
-  <mtc:Parameter name="DensityRatio" optional="false">
-    <uom:Quantity name="ratio" />
-    <mtc:Definition>{kg?m3/kg?m3 g?cm3/g?cm3, lb?ft3/lb?ft3}</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Reference material" optional="false">
-    <mtc:Definition>{Water , Air}</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Temperature" optional="false">
-    <uom:Quantity name="temperature" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="Pressure" optional="true">
-    <uom:Quantity name="pressure" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="Volume" optional="true">
-    <uom:Quantity name="volume" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Discipline name="Mass" />
-  <mtc:Definition>Test Process that measures the relative density, or specific gravity, is the ratio of the density (mass of a unit volume) of a substance to the density of a given reference material. Specific gravity for liquids is nearly always measured with respect to water at its densest (at 4 ?C or 39.2 ?F); for gases, air at room temperature (20 ?C or 68 ?F) is the reference. The term ?relative density? is often preferred in scientific usage. It is defined as a ratio of the density of a particular substance with that of water.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Ratio.Density-Mass" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="ratio"></uom:Quantity>
+	</mtc:Result>
+	<mtc:Parameter name="DensityRatio" optional="false">
+		<mtc:Definition>{kg·m3/kg·m3 g·cm3/g·cm3, lb·ft3/lb·ft3}</mtc:Definition>
+		<uom:Quantity name="ratio"></uom:Quantity>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReferenceMaterial" optional="false">
+		<mtc:Definition>{Water , Air}</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Temperature" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="temperature"></uom:Quantity>
+		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS6"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Pressure" optional="true">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="pressure"></uom:Quantity>
+		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Volume" optional="true">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="volume"></uom:Quantity>
+		<mtc:mLayer aspect="as_volume" id="AS37"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Discipline name="Mass"></mtc:Discipline>
+	<mtc:Definition>Test Process that measures the relative density, or specific gravity, is the ratio of the density (mass of a unit volume) of a substance to the density of a given reference material. Specific gravity for liquids is nearly always measured with respect to water at its densest (at 4 °C or 39.2 °F); for gases, air at room temperature (20 °C or 68 °F) is the reference. The term “relative density” is often preferred in scientific usage. It is defined as a ratio of the density of a particular substance with that of water.</mtc:Definition>
 </Taxon>

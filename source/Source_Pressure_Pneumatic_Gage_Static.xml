@@ -1,23 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Source.Pressure.Pneumatic.Gage.Static" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Pressure">
-    <uom:Quantity name="pressure" />
-  </mtc:Result>
-  <mtc:Parameter name="Pressure" optional="false">
-    <uom:Quantity name="pressure" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="O2_Safe" optional="true">
-    <mtc:Definition>Yes</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Pressure" />
-  <mtc:Definition>This test process generates the pneumatic gage pressure (or relative pressure) to be measured by the unit under test. The resulting measured will be unit of measure as defined in the test point?s data. Note: Although the unit of measure can be read from the test point?s unit of measure it is good practice to pass the Unit of Measure to the test process as a parameter to avoid confusion when synchronizing data between systems. https://en.wikipedia.org/wiki/Pressure_measurement https://www.nxp.com/docs/en/application-note/AN1573.pdf?&amp;srch=1</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Source.Pressure.Pneumatic.Gage.Static" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="pressure"></uom:Quantity>
+		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Pressure" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="pressure"></uom:Quantity>
+		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="O2.Safe" optional="true">
+		<mtc:Definition>Yes</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Discipline name="Pressure"></mtc:Discipline>
+	<mtc:Definition>This test process generates the pneumatic gage pressure (or relative pressure) to be measured by the unit under test. The resulting measured will be unit of measure as defined in the test point’s data. Note: Although the unit of measure can be read from the test point’s unit of measure it is good practice to pass the Unit of Measure to the test process as a parameter to avoid confusion when synchronizing data between systems. https://en.wikipedia.org/wiki/Pressure_measurement https://www.nxp.com/docs/en/application-note/AN1573.pdf?&amp;srch=1</mtc:Definition>
 </Taxon>

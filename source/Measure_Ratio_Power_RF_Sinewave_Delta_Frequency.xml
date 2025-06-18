@@ -1,28 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Ratio.Power.RF.Sinewave.Delta.Frequency" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="DeltaPower">
-    <uom:Quantity name="power" />
-  </mtc:Result>
-  <mtc:Parameter name="Frequency" optional="false">
-    <uom:Quantity name="frequency" />
-    <mtc:Definition>Measurement Frequency</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="FrequencyRef" optional="false">
-    <uom:Quantity name="frequency" />
-    <mtc:Definition>Reference Frequency</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Power" optional="false">
-    <uom:Quantity name="power" />
-    <mtc:Definition>Measurement Power</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Electrical" />
-  <mtc:Definition>A test process that measures the difference between 2 sinusoidal RF  signals at different frequencies while keeping the power levels constant.  The two measured values are compared, the results can be expressed as dB or percent of change. These two signals are often used when calibrating flatness of a signal generator or similar device.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Ratio.Power.RF.Sinewave.Delta.Frequency" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="power"></uom:Quantity>
+		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Frequency" optional="false">
+		<mtc:Definition>Measurement Frequency</mtc:Definition>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="FrequencyRef" optional="false">
+		<mtc:Definition>Reference Frequency</mtc:Definition>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Power" optional="false">
+		<mtc:Definition>Measurement Power</mtc:Definition>
+		<uom:Quantity name="power"></uom:Quantity>
+		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Discipline name="Electrical"></mtc:Discipline>
+	<mtc:Definition>A test process that measures the difference between 2 sinusoidal RF  signals at different frequencies while keeping the power levels constant.  The two measured values are compared, the results can be expressed as dB or percent of change. These two signals are often used when calibrating flatness of a signal generator or similar device.</mtc:Definition>
 </Taxon>

@@ -1,46 +1,45 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Length.Form.Flatness" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Lenght">
-    <uom:Quantity name="length" />
-  </mtc:Result>
-  <mtc:Parameter name="Length" optional="false">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Longest dimension in the surface of interest</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="StartPointX" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Start Point on the X-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="StartPointY" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Start Point on the Y-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="EndPointX" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>End Point on the X-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="EndPointY" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>End Point on the Y-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Resolution" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>x-y distance between points</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="MeasurementDescription" optional="true">
-    <mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Reference" optional="true">
-    <mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Dimensional" />
-  <mtc:Definition>The minimum normal (perpendicular) distance between two parallel planes that fully contain a surface. Commonly, the two parallel planes may be constructed from the surface itself (in which the highest point and lowest point of the surface would be tangent to the two parallel planes), but a drawing may specify how the parallel planes should be constructed. Reference https://www.gdandtbasics.com/flatness/ Dimensioning and Tolerancing, Engineering Product Definition and Related Documentation Practices, ASME Y14.5-2018 https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Length.Form.Flatness" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Length" optional="false">
+		<mtc:Definition>Longest dimension in the surface of interest</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="StartPointX" optional="true">
+		<mtc:Definition>Start Point on the X-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="StartPointY" optional="true">
+		<mtc:Definition>Start Point on the Y-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="EndPointX" optional="true">
+		<mtc:Definition>End Point on the X-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="EndPointY" optional="true">
+		<mtc:Definition>End Point on the Y-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Resolution" optional="true">
+		<mtc:Definition>x-y distance between points</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="MeasurementDescription" optional="true">
+		<mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Reference" optional="true">
+		<mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Discipline name="Dimensional"></mtc:Discipline>
+	<mtc:Definition>The minimum normal (perpendicular) distance between two parallel planes that fully contain a surface. Commonly, the two parallel planes may be constructed from the surface itself (in which the highest point and lowest point of the surface would be tangent to the two parallel planes), but a drawing may specify how the parallel planes should be constructed. Reference https://www.gdandtbasics.com/flatness/ Dimensioning and Tolerancing, Engineering Product Definition and Related Documentation Practices, ASME Y14.5-2018 https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing</mtc:Definition>
 </Taxon>

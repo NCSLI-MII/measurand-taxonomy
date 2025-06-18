@@ -1,37 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Ratio.Torque" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Ratio">
-    <uom:Quantity name="torque" />
-  </mtc:Result>
-  <mtc:Parameter name="Input" optional="false">
-    <uom:Quantity name="torque" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="Output" optional="false">
-    <uom:Quantity name="torque" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="Ratio" optional="false">
-    <uom:Quantity name="ratio" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="Direction" optional="true">
-    <mtc:Definition> {CW, CCW}</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="InputConnector" optional="true">
-    <mtc:Definition> text</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="OutputConnector" optional="true">
-    <mtc:Definition> text</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Torque" />
-  <mtc:Definition>A ratio of an instrument?s torque output to the torque applied to the input, e.g., a torque multiplier?s output torque divided by its input torque</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Ratio.Torque" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="torque"></uom:Quantity>
+	</mtc:Result>
+	<mtc:Parameter name="Input" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="torque"></uom:Quantity>
+	</mtc:Parameter>
+	<mtc:Parameter name="Output" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="torque"></uom:Quantity>
+	</mtc:Parameter>
+	<mtc:Parameter name="Ratio" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="ratio"></uom:Quantity>
+	</mtc:Parameter>
+	<mtc:Parameter name="Direction" optional="true">
+		<mtc:Definition>{CW, CCW}</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="InputConnector" optional="true">
+		<mtc:Definition>text</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="OutputConnector" optional="true">
+		<mtc:Definition>text</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Discipline name="Torque"></mtc:Discipline>
+	<mtc:Definition>A ratio of an instrument’s torque output to the torque applied to the input, e.g., a torque multiplier’s output torque divided by its input torque</mtc:Definition>
 </Taxon>

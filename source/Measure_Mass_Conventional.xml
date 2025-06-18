@@ -1,24 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Mass.Conventional" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Mass">
-    <uom:Quantity name="mass" />
-  </mtc:Result>
-  <mtc:Parameter name="Mass" optional="false">
-    <uom:Quantity name="mass" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="Density" optional="true">
-    <uom:Quantity name="density-mass" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Discipline name="Mass" />
-  <mtc:Definition>Test Process that measures the conventional value of the result of weighing a body in air equals the mass of a standard that balances this body under the following conventionally chosen conditions: ambient temperature 20 ?C air density 1.2 mg/cm? mass density 8.000 g/cm? Conventional mass has the same unit as mass (the kilogram), because the multiplication of a mass by a dimensionless quantity defines its values. Labs typically measure mass and correct the results from actual to conventional conditions. ?Apparent Mass versus 8.0 g/cm?? formerly equated to conventional mass in the United States. References: NISTIR 6969 (2019) https://www.nist.gov/publications/nistir-6969-selected-laboratory-and-measurement-practices-and-procedures-support-1 OIML D28 (2004)  https://www.oiml.org/en/files/pdf_d/d028-e04.pdf NIST Handbook 44: https://www.nist.gov/pml/weights-and-measures/publications/nist-handbooks/other-nist-handbooks/other-nist-handbooks-2-3</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Mass.Conventional" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="mass"></uom:Quantity>
+		<mtc:mLayer aspect="as_mass" id="AS2"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Mass" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="mass"></uom:Quantity>
+		<mtc:mLayer aspect="as_mass" id="AS2"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Density" optional="true">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="density-mass"></uom:Quantity>
+	</mtc:Parameter>
+	<mtc:Discipline name="Mass"></mtc:Discipline>
+	<mtc:Definition>Test Process that measures the conventional value of the result of weighing a body in air equals the mass of a standard that balances this body under the following conventionally chosen conditions: ambient temperature 20 °C air density 1.2 mg/cm³ mass density 8.000 g/cm³ Conventional mass has the same unit as mass (the kilogram), because the multiplication of a mass by a dimensionless quantity defines its values. Labs typically measure mass and correct the results from actual to conventional conditions. “Apparent Mass versus 8.0 g/cm³” formerly equated to conventional mass in the United States. References: NISTIR 6969 (2019) https://www.nist.gov/publications/nistir-6969-selected-laboratory-and-measurement-practices-and-procedures-support-1 OIML D28 (2004)  https://www.oiml.org/en/files/pdf_d/d028-e04.pdf NIST Handbook 44: https://www.nist.gov/pml/weights-and-measures/publications/nist-handbooks/other-nist-handbooks/other-nist-handbooks-2-3</mtc:Definition>
 </Taxon>
