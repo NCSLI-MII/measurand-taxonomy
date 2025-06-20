@@ -1,44 +1,42 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Density-Mass.Solid" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Density">
-    <uom:Quantity name="density-mass" />
-  </mtc:Result>
-  <mtc:Parameter name="Density " optional="false">
-    <uom:Quantity name="density-mass" />
-    <mtc:Definition>Density measured</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Temperature" optional="false">
-    <uom:Quantity name="temperature" />
-    <mtc:Definition>Temperature of the solid</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Nominal Height" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Height</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Nominal Length" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Length</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Nominal Width" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Width</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Nominal Volume" optional="true">
-    <uom:Quantity name="volume" />
-    <mtc:Definition>Volume</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Mass" optional="true">
-    <uom:Quantity name="mass" />
-    <mtc:Definition>Mass</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Mass" />
-  <mtc:Definition>Test Process that measures a solid?s density as defined by the amount of mass present in a specified volume temperature. Temperature affects density as solids expand and contract according to their temperature coefficients. ** Includes voids and non-uniformity</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Density-Mass.Solid" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="density-mass"></uom:Quantity>
+	</mtc:Result>
+	<mtc:Parameter name="Density" optional="false">
+		<mtc:Definition>Density measured</mtc:Definition>
+		<uom:Quantity name="density-mass"></uom:Quantity>
+	</mtc:Parameter>
+	<mtc:Parameter name="Temperature" optional="false">
+		<mtc:Definition>Temperature of the solid</mtc:Definition>
+		<uom:Quantity name="temperature"></uom:Quantity>
+		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS6"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="NominalHeight" optional="true">
+		<mtc:Definition>Height</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="NominalLength" optional="true">
+		<mtc:Definition>Length</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="NominalWidth" optional="true">
+		<mtc:Definition>Width</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="NominalVolume" optional="true">
+		<mtc:Definition>Volume</mtc:Definition>
+		<uom:Quantity name="volume"></uom:Quantity>
+		<mtc:mLayer aspect="as_volume" id="AS37"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Mass" optional="true">
+		<mtc:Definition>Mass</mtc:Definition>
+		<uom:Quantity name="mass"></uom:Quantity>
+		<mtc:mLayer aspect="as_mass" id="AS2"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Discipline name="Mass"></mtc:Discipline>
+	<mtc:Definition>Test Process that measures a solid’s density as defined by the amount of mass present in a specified volume temperature. Temperature affects density as solids expand and contract according to their temperature coefficients. ** Includes voids and non-uniformity</mtc:Definition>
 </Taxon>

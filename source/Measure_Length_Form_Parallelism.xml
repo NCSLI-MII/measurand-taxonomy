@@ -1,57 +1,58 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Length.Form.Parallelism" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Parallelism">
-    <uom:Quantity name="length" />
-  </mtc:Result>
-  <mtc:Parameter name="Length" optional="false">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Distance ? Nominal distance between parallel planes</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Type" optional="true">
-    <mtc:Definition>{Axis or surface}</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Dimension" optional="true">
-    <mtc:Definition>Largest dimension of the plane being measured</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="StartPointX" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Start Point on the X-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="StartPointY" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Start Point on the Y-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="StartPointZ" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>Start Point on the Z-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="EndPointX" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>End Point on the X-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="EndPointY" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>End Point on the Y-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="EndPointZ" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>End Point on the Z-Axis distance from the reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Resolution" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition> Distance between points</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Reference" optional="true">
-    <mtc:Definition> DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Dimensional" />
-  <mtc:Definition>Parallelism is a fairly common symbol that requires the referenced surface or line to be parallel to a datum surface or line. Parallelism can reference a 2D line, but more commonly it describes the orientation of one surface plane parallel to another datum plane.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Length.Form.Parallelism" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Length" optional="false">
+		<mtc:Definition>Distance – Nominal distance between parallel planes</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Type" optional="true">
+		<mtc:Definition>{Axis or surface}</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="Dimension" optional="true">
+		<mtc:Definition>Largest dimension of the plane being measured</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="StartPointX" optional="true">
+		<mtc:Definition>Start Point on the X-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="StartPointY" optional="true">
+		<mtc:Definition>Start Point on the Y-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="StartPointZ" optional="true">
+		<mtc:Definition>Start Point on the Z-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="EndPointX" optional="true">
+		<mtc:Definition>End Point on the X-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="EndPointY" optional="true">
+		<mtc:Definition>End Point on the Y-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="EndPointZ" optional="true">
+		<mtc:Definition>End Point on the Z-Axis distance from the reference</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Resolution" optional="true">
+		<mtc:Definition>Distance between points</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Reference" optional="true">
+		<mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Discipline name="Dimensional"></mtc:Discipline>
+	<mtc:Definition>Parallelism is a fairly common symbol that requires the referenced surface or line to be parallel to a datum surface or line. Parallelism can reference a 2D line, but more commonly it describes the orientation of one surface plane parallel to another datum plane.</mtc:Definition>
 </Taxon>

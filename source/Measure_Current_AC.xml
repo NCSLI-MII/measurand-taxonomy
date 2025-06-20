@@ -1,20 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Current.AC" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Amps">
-    <uom:Quantity name="current" />
-  </mtc:Result>
-  <mtc:Parameter name="Amps" optional="false">
-    <uom:Quantity name="current" />
-    <mtc:Definition>Current Measured</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Electrical" />
-  <mtc:Definition>The process measures the AC Current sourced by a device without knowing the shape of the signal. Values can only be tested in RMS because the shape of the signal is unknown.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Current.AC" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="current"></uom:Quantity>
+		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Amps" optional="false">
+		<mtc:Definition>Current Measured</mtc:Definition>
+		<uom:Quantity name="current"></uom:Quantity>
+		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Discipline name="Electrical"></mtc:Discipline>
+	<mtc:Definition>The process measures the AC Current sourced by a device without knowing the shape of the signal. Values can only be tested in RMS because the shape of the signal is unknown.</mtc:Definition>
 </Taxon>

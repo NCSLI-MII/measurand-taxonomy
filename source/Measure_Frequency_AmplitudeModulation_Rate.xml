@@ -1,46 +1,44 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Frequency.AmplitudeModulation.Rate" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Rate">
-    <uom:Quantity name="frequency" />
-  </mtc:Result>
-  <mtc:Parameter name="Frequency" optional="false">
-    <uom:Quantity name="frequency" />
-    <mtc:Definition>Carrier Frequency</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Rate" optional="false">
-    <uom:Quantity name="frequency" />
-    <mtc:Definition>Modulation Rate Frequency</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Power" optional="true">
-    <uom:Quantity name="power" />
-    <mtc:Definition>Power of the Carrier Frequency</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Modulation" optional="true">
-    <uom:Quantity name="ratio" />
-    <mtc:Definition>Percent of Amplitude Modulation</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Detector" optional="true">
-    <mtc:Definition> {+Peak, -Peak, Average, PeakToPeak, RMS}</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="HighPassFilter" optional="true">
-    <uom:Quantity name="frequency" />
-    <mtc:Definition>Frequency of High Pass Filter</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="LowPassFilter" optional="true">
-    <uom:Quantity name="frequency" />
-    <mtc:Definition>Low of High Pass Filter</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="BandPassFilter " optional="true">
-    <mtc:Definition>Frequency of CCIT</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Electrical" />
-  <mtc:Definition>The process of measuring the demodulated frequency rate of an Amplitude Modulate (AM) signal.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Frequency.AmplitudeModulation.Rate" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Frequency" optional="false">
+		<mtc:Definition>Carrier Frequency</mtc:Definition>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Rate" optional="false">
+		<mtc:Definition>Modulation Rate Frequency</mtc:Definition>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Power" optional="true">
+		<mtc:Definition>Power of the Carrier Frequency</mtc:Definition>
+		<uom:Quantity name="power"></uom:Quantity>
+		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Modulation" optional="true">
+		<mtc:Definition>Percent of Amplitude Modulation</mtc:Definition>
+		<uom:Quantity name="ratio"></uom:Quantity>
+	</mtc:Parameter>
+	<mtc:Parameter name="Detector" optional="true">
+		<mtc:Definition>{+Peak, -Peak, Average, PeakToPeak, RMS}</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="HighPassFilter" optional="true">
+		<mtc:Definition>Frequency of High Pass Filter</mtc:Definition>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="LowPassFilter" optional="true">
+		<mtc:Definition>Low of High Pass Filter</mtc:Definition>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="BandPassFilter" optional="true">
+		<mtc:Definition>Frequency of CCIT</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Discipline name="Electrical"></mtc:Discipline>
+	<mtc:Definition>The process of measuring the demodulated frequency rate of an Amplitude Modulate (AM) signal.</mtc:Definition>
 </Taxon>

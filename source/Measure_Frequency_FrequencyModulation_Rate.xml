@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Taxon name="Measure.Frequency.FrequencyModulation.Deviation" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+<Taxon name="Measure.Frequency.FrequencyModulation.Rate" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result>
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Frequency" optional="false">
-		<mtc:Definition>Carrier of the Carries</mtc:Definition>
+		<mtc:Definition>Carrier Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Deviation" optional="false">
-		<mtc:Definition>Frequency Deviation</mtc:Definition>
+	<mtc:Parameter name="Rate" optional="false">
+		<mtc:Definition>FM Modulation Rate</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Power" optional="true">
-		<mtc:Definition>Power of the Carrier Signal</mtc:Definition>
+		<mtc:Definition>Carrier Power</mtc:Definition>
 		<uom:Quantity name="power"></uom:Quantity>
 		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Rate" optional="true">
-		<mtc:Definition>Modulation Rate Frequency</mtc:Definition>
+	<mtc:Parameter name="Deviation" optional="true">
+		<mtc:Definition>Deviation Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
@@ -28,18 +28,23 @@
 		<mtc:Definition>{+Peak, -Peak, Average, PeakToPeak, RMS}</mtc:Definition>
 	</mtc:Parameter>
 	<mtc:Parameter name="HighPassFilter" optional="true">
-		<mtc:Definition>High Pass Freqyency</mtc:Definition>
+		<mtc:Definition>HighPassFilter</mtc:Definition>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="HighPassFilter" optional="true">
+		<mtc:Definition>High Pass Filter Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="LowPassFilter" optional="true">
-		<mtc:Definition>Low Pass Freqyency</mtc:Definition>
+		<mtc:Definition>Low Pass Filter Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="BandPassFilter" optional="true">
-		<mtc:Definition>Band Pass Freqyency of CCIT</mtc:Definition>
+		<mtc:Definition>Band Pass Filter Frequency or CCIT</mtc:Definition>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
-	<mtc:Definition>This process measures the Deviation Frequency of a Frequency Modulated (FM) signal.   The deviation is used to describe the maximum difference between an FM modulated frequency and the nominal carrier frequency</mtc:Definition>
+	<mtc:Definition>The process of measuring the Demodulated Rate of a Frequency Modulated (FM) Signal.</mtc:Definition>
 </Taxon>

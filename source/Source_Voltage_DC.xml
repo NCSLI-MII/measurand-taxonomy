@@ -1,24 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Source.Voltage.DC" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Volts">
-    <uom:Quantity name="voltage" />
-  </mtc:Result>
-  <mtc:Parameter name="Volts" optional="false">
-    <uom:Quantity name="voltage" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="Impedance" optional="true">
-    <uom:Quantity name="impedance" />
-    <mtc:Definition>Output Impedance</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Electrical" />
-  <mtc:Definition>The process of sourcing a DC (Direct Current) voltage from a device and measuring the value on the UUT.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Source.Voltage.DC" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="voltage"></uom:Quantity>
+		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Volts" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="voltage"></uom:Quantity>
+		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Impedance" optional="true">
+		<mtc:Definition>Output Impedance</mtc:Definition>
+		<uom:Quantity name="impedance"></uom:Quantity>
+	</mtc:Parameter>
+	<mtc:Discipline name="Electrical"></mtc:Discipline>
+	<mtc:Definition>The process of sourcing a DC (Direct Current) voltage from a device and measuring the value on the UUT.</mtc:Definition>
 </Taxon>

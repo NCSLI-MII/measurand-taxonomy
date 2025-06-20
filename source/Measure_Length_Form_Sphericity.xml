@@ -1,38 +1,35 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Length.Form.Sphericity" deprecated="false" replacement="">
-  <mtc:ExternalReferences>
-    <mtc:Reference>
-      <mtc:ReferenceUrl>
-        <mtc:name />
-        <mtc:url />
-      </mtc:ReferenceUrl>
-    </mtc:Reference>
-  </mtc:ExternalReferences>
-  <mtc:Result name="Sphericity">
-    <uom:Quantity name="length" />
-  </mtc:Result>
-  <mtc:Parameter name="Sphericity" optional="false">
-    <uom:Quantity name="length" />
-    <mtc:Definition />
-  </mtc:Parameter>
-  <mtc:Parameter name="Height" optional="true">
-    <uom:Quantity name="length" />
-    <mtc:Definition>above turntable</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="NumberOfPoints" optional="true">
-    <mtc:Definition>Number of Measurment Points</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="StartAngle" optional="true">
-    <uom:Quantity name="plane-angle" />
-    <mtc:Definition>Rotational Angle from reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="StopAngle" optional="true">
-    <uom:Quantity name="plane-angle" />
-    <mtc:Definition>Rotational Angle from reference</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Parameter name="Reference" optional="true">
-    <mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
-  </mtc:Parameter>
-  <mtc:Discipline name="Dimensional" />
-  <mtc:Definition>Sphericity is a measure of how closely the shape of an object resembles that of a perfect sphere. For example, the sphericity of the balls inside a ball bearing determines the quality of the bearing, such as the load it can bear or the speed at which it can turn without failing. Sphericity is a specific example of a compactness measure of a shape. Defined by Wadell in 1935,[1] the sphericity, {\displaystyle \Psi }\Psi , of a particle is the ratio of the surface area of a sphere with the same volume as the given particle to the surface area of the particle: where {\displaystyle V_{p}}V_p is volume of the particle and {\displaystyle A_{p}}A_p is the surface area of the particle. The sphericity of a sphere is unity by definition and, by the isoperimetric inequality, any particle which is not a sphere will have sphericity less than 1. Sphericity applies in three dimensions; its analogue in two dimensions, such as the cross sectional circles along a cylindrical object such as a shaft, is called roundness.</mtc:Definition>
+<?xml version="1.0" encoding="utf-8"?>
+<Taxon name="Measure.Length.Form.Sphericity" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+	<mtc:Result>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="Sphericity" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Height" optional="true">
+		<mtc:Definition>above turntable</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="NumberOfPoints" optional="true">
+		<mtc:Definition>Number of Measurment Points</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="StartAngle" optional="true">
+		<mtc:Definition>Rotational Angle from reference</mtc:Definition>
+		<uom:Quantity name="plane-angle"></uom:Quantity>
+		<mtc:mLayer aspect="as_plane_angle" id="AS10"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="StopAngle" optional="true">
+		<mtc:Definition>Rotational Angle from reference</mtc:Definition>
+		<uom:Quantity name="plane-angle"></uom:Quantity>
+		<mtc:mLayer aspect="as_plane_angle" id="AS10"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Reference" optional="true">
+		<mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Discipline name="Dimensional"></mtc:Discipline>
+	<mtc:Definition>Sphericity is a measure of how closely the shape of an object resembles that of a perfect sphere. For example, the sphericity of the balls inside a ball bearing determines the quality of the bearing, such as the load it can bear or the speed at which it can turn without failing. Sphericity is a specific example of a compactness measure of a shape. Defined by Wadell in 1935,[1] the sphericity, {\displaystyle \Psi }\Psi , of a particle is the ratio of the surface area of a sphere with the same volume as the given particle to the surface area of the particle: where {\displaystyle V_{p}}V_p is volume of the particle and {\displaystyle A_{p}}A_p is the surface area of the particle. The sphericity of a sphere is unity by definition and, by the isoperimetric inequality, any particle which is not a sphere will have sphericity less than 1. Sphericity applies in three dimensions; its analogue in two dimensions, such as the cross sectional circles along a cylindrical object such as a shaft, is called roundness.</mtc:Definition>
 </Taxon>
