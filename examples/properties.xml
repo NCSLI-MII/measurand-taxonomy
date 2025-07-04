@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mtc:Properties xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog">
+    <mtc:Property name="DetectorMode" id="propertyId1234">
+        <mtc:list> +Peak -Peak Average PeakToPeak RMS</mtc:list>
+    </mtc:Property>
+</mtc:Properties>
+<!-- vim:fenc=utf-8
+  -->
