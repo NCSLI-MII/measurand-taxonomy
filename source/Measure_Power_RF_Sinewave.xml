@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Taxon name="Measure.Power.RF.Sinewave" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+<mtc:Taxon name="Measure.Power.RF.Sinewave" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result>
 		<uom:Quantity name="power"></uom:Quantity>
 		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
@@ -20,4 +20,4 @@
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
 	<mtc:Definition>A test process that measures the RF power of a signal.  It can be either direct or monitored by an RF Power measurement device</mtc:Definition>
-</Taxon>
+</mtc:Taxon>

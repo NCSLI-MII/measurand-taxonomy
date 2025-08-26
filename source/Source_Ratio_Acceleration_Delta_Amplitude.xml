@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Taxon name="Source.Ratio.Acceleration.Delta.Amplitude" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+<mtc:Taxon name="Source.Ratio.Acceleration.Delta.Amplitude" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result>
 		<uom:Quantity name="ratio"></uom:Quantity>
 	</mtc:Result>
@@ -42,4 +42,4 @@
 	</mtc:Parameter>
 	<mtc:Discipline name="Vibration"></mtc:Discipline>
 	<mtc:Definition>UUT is placed in a device, normally a shaker, which then moves in a single axis direction at a known acceleration at the set frequency. Then the amplitude is changed and the difference in sensitivity is expressed as the slope of the best fit straight line between the data plotted as output (Voltage, IEPE, Current or Charge) vs Test amplitude. Ratio output of linearity expressed as the worst case voltage difference between the measured value and the best fit straight line divided by the full scale output (Voltage, IEPE, Current or Charge)*100 (expressed as a percentage).</mtc:Definition>
-</Taxon>
+</mtc:Taxon>

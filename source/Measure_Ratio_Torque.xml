@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Taxon name="Measure.Ratio.Torque" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+<mtc:Taxon name="Measure.Ratio.Torque" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result>
 		<uom:Quantity name="torque"></uom:Quantity>
 	</mtc:Result>
@@ -26,4 +26,4 @@
 	</mtc:Parameter>
 	<mtc:Discipline name="Torque"></mtc:Discipline>
 	<mtc:Definition>A ratio of an instrument’s torque output to the torque applied to the input, e.g., a torque multiplier’s output torque divided by its input torque</mtc:Definition>
-</Taxon>
+</mtc:Taxon>

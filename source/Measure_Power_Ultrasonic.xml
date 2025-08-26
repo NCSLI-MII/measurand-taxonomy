@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Taxon name="Measure.Power.Ultrasonic" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+<mtc:Taxon name="Measure.Power.Ultrasonic" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result>
 		<uom:Quantity name="power"></uom:Quantity>
 		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Discipline name="Acoustics, ultrasound and vibration"></mtc:Discipline>
 	<mtc:Definition>The time-average ultrasonic power emitted by an ultrasonic transducer.  The measurement of ultrasonic power in liquid is based on the measurement of radition force using a gravimetric balance. The acoustic power radiated from the transducer can be related to the radiation force measured by an electronic balance.</mtc:Definition>
-</Taxon>
+</mtc:Taxon>
