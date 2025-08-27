@@ -80,6 +80,6 @@ jobs:
         id: merge-source-files
         if: steps.changed-source-files.outputs.any_changed == 'true' && steps.valid-changed-source-files.outcome == 'success'
         run:
-          python scripts/combiner.sh ./source
+          sh scripts/combiner.sh ./source
           python scripts/validator.py -f merge.xml -d ./source
               
