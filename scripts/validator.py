@@ -15,11 +15,20 @@ Requires python environment with xmlschema
 
 import xmlschema
 import argparse
+import time
 from pathlib import Path
 
 def validate(*args):
     schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
-    schema.validate(args[0])
+    try:
+        schema.validate(args[0])
+    except xmlschema.XMLSchemaException as e:
+        if "Too Many Requests" in str(e):
+            print("Rate limit hit. Waiting before retrying...")
+            time.sleep(5)
+            schema.validate(args[0])
+        else:
+            raise(e)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
