@@ -65,6 +65,7 @@ jobs:
             source/**.xml
       
       - name: List catalog if changed
+        id: valid-changed-source-files
         if: steps.changed-source-files.outputs.any_changed == 'true'
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-source-files.outputs.all_changed_files }}
@@ -74,4 +75,11 @@ jobs:
             echo "$file" >> changed_files.txt
           done
           python scripts/validator.py -l changed_files.txt -d ./
+      
+      - name: Merge source files
+        id: merge-source-files
+        if: steps.changed-source-files.outputs.any_changed == 'true' && steps.valid-changed-source-files.outcome == 'success'
+        run:
+          python scripts/combiner.sh ./source
+          python scripts/validator.py -f merge.xml -d ./source
               
