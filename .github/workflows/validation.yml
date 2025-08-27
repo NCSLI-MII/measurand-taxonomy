@@ -72,5 +72,6 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
             python scripts/validator.py -f $file -d ./
+            sleep 2s
           done
               
