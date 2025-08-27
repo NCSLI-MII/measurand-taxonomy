@@ -29,4 +29,40 @@ jobs:
             import xmlschema
             schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
             schema.validate('MeasurandTaxonomyCatalog.xml')
+  changed-files:
+    runs-on: ubuntu-latest
+    name: Test changed-files
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get changed catalog
+        id: changed-catalog-file
+        uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
+        with:
+          files: |
+            MeasurandTaxonomyCatalog.xml
+      
+      - name: List catalog if changed
+        if: steps.changed-catalog-file.outputs.any_changed == 'true'
+        env:
+          ALL_CHANGED_FILES: ${{ steps.change-catalog-file.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "$file was changed"
+          done
+
+      - name: Get all changed source xml
+        id: changed-source-files
+        uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
+        with:
+          files: |
+            source/**.xml
+      
+      - name: List catalog if changed
+        if: steps.changed-source-files.outputs.any_changed == 'true'
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-source-files.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "$file was changed"
+          done
               
