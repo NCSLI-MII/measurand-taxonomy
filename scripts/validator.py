@@ -15,11 +15,23 @@ Requires python environment with xmlschema
 
 import xmlschema
 import argparse
+import time
 from pathlib import Path
 
 def validate(*args):
     schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
     schema.validate(args[0])
+
+def validate_list(*args):
+    schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
+    
+    lst = open(args[1], 'r+').read().splitlines()
+
+    for name in lst:
+        p = Path(args[0])
+        f = p / name
+        print(f)
+        schema.validate(f)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
@@ -31,10 +43,14 @@ if __name__ == '__main__':
             help="Input taxonomy file")
     parser.add_argument('-d', '--dirpath', help="Output directory")
     parser.add_argument('-v', '--verbose', action='store_true')
+    parser.add_argument('-l', '--list', help="list of filenames")
     
     args = parser.parse_args()
     print(args)
     p = Path(args.dirpath)
-    f = p / args.filename
-    print(f.resolve())
-    validate(f)
+    if args.list is not None:
+        validate_list(args.dirpath, args.list)
+    else:
+        f = p / args.filename
+        print(f.resolve())
+        validate(f)
