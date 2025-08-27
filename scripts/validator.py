@@ -23,6 +23,8 @@ def validate(*args):
     try:
         schema.validate(args[0])
     except xmlschema.XMLSchemaException as e:
+        print("Caught an exception!")
+        print(str(e))
         if "Too Many Requests" in str(e):
             print("Rate limit hit. Waiting before retrying...")
             time.sleep(5)
