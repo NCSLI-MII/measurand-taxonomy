@@ -91,13 +91,4 @@ jobs:
         run: |
           sh scripts/combiner.sh ./source
           python scripts/validator.py -f merge.xml -d ./source
-          diff ./source/merge.xml MeasurandTaxonomyCatalog.xml
-
-      - name: Commit merged catalog
-        id: commit-catalog-file
-        if: steps.merge-source-files.outcome == 'success'
-        run: |
-          cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
-          git status
-          git diff MeasurandTaxonomyCatalog.xml
               
