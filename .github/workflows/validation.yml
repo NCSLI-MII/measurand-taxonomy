@@ -94,7 +94,7 @@ jobs:
 
       - name: Commit merged catalog
         id: commit-catalog-file
-        if: merge-source-files == 'success'
+        if: steps.merge-source-files.outcome == 'success'
         run: |
           cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
           git status
