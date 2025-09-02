@@ -98,4 +98,5 @@ jobs:
         run: |
           cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
           git status
+          git diff MeasurandTaxonomyCatalog.xml
               
