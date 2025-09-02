@@ -65,7 +65,13 @@ jobs:
           files: |
             source/**.xml
       
-      - name: List catalog if changed
+      - name: Check if source and catalog changed
+        id: changed-source-catalog
+        if: steps.changed-source-files.outputs.any_changed == 'true' && steps.changed-catalog-file.outputs.any_changed == 'true'
+        run:
+          exit 1
+
+      - name: Validate source if changed
         id: valid-changed-source-files
         if: steps.changed-source-files.outputs.any_changed == 'true'
         env:
