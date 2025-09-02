@@ -101,8 +101,5 @@ jobs:
           git config user.email git-actions@github.com
           git status
           git diff MeasurandTaxonomyCatalog.xml
-          git add MeasurandTaxonomyCatalog.xml
-          git commit -m "automated merge of source files to catalog"
-          git push
           
               
