@@ -91,6 +91,7 @@ jobs:
         run: |
           sh scripts/combiner.sh ./source
           python scripts/validator.py -f merge.xml -d ./source
+          diff ./source/merge.xml MeasurandTaxonomyCatalog.xml
 
       - name: Commit merged catalog
         id: commit-catalog-file
