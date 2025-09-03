@@ -125,6 +125,6 @@ jobs:
           git config user.name github-actions
           git config user.email git-actions@github.com
           git status
-          git diff --word-diff origin/main MeasurandTaxonomyCatalog.xml | grep -P '+|-' --color=never
+          git diff --word-diff --color=always origin/main MeasurandTaxonomyCatalog.xml | grep -P '\+|\-' --color=never
           
               
