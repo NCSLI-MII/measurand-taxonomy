@@ -117,6 +117,12 @@ jobs:
           sh scripts/combiner.sh ./source
           python scripts/validator.py -f merge.xml -d ./source
 
+      - name: Upload merged catalog
+        uses: actions/upload-artifact@v4
+        with:
+          name: merge
+          path: ./source/merge.xml
+
       - name: Commit merge
         id: commit-merged-catalog
         if: steps.merge-source-files.outcome == 'success'
