@@ -73,6 +73,27 @@ jobs:
         run:
           exit 1
 
+      - name: Check if source files removed
+        id: removed-source-files
+        if: steps.changed-source.files.outputs.any_deleted == 'true'
+        env:
+          REMOVED_FILES: ${{ steps.changed-source-files.outputs.deleted_files }}
+        run: |
+          for file in ${REMOVED_FILES}; do
+            echo "$file was removed"
+
+      - name: Validate new source if changed
+        id: valid-new-source-files
+        if: steps.changed-source-files.outputs.any_added == 'true'
+        env:
+          ADDED_FILES: ${{ steps.changed-source-files.outputs.added_files }}
+        run: |
+          for file in ${ADDED_FILES}; do
+            echo "$file was added"
+            echo "$file" >> changed_files.txt
+          done
+          python scripts/validator.py -l changed_files.txt -d ./
+      
       - name: Validate source if changed
         id: valid-changed-source-files
         if: steps.changed-source-files.outputs.any_changed == 'true'
