@@ -120,7 +120,7 @@ jobs:
       - name: Commit merge
         id: commit-merged-catalog
         if: steps.merge-source-files.outcome == 'success'
-        run:
+        run: |
           cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
           git config user.name github-actions
           git config user.email git-actions@github.com
