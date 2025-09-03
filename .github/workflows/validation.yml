@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
       - uses: actions/setup-python@v2
         with:
           python-version: '3.10'
@@ -35,6 +38,8 @@ jobs:
     name: Test changed-files
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - uses: actions/setup-python@v2
         with:
           python-version: '3.10'
@@ -73,8 +78,7 @@ jobs:
         if: |
           steps.changed-source-files.outputs.any_changed == 'true' && 
           (steps.changed-catalog-file.outputs.any_changed == 'true' || steps.changed-source-files.outputs.any_deleted == 'true' || steps.changed-source-files.outputs.any_added == 'true')
-        run:
-          exit 1
+        run: exit 1
 
       - name: Check if source files removed
         id: removed-source-files
@@ -131,6 +135,7 @@ jobs:
         if: steps.merge-source-files.outcome == 'success'
         run: |
           cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
+          rm ./source/merge.xml
           git config user.name github-actions
           git config user.email git-actions@github.com
           git status
