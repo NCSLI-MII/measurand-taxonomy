@@ -30,6 +30,7 @@ jobs:
             schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
             schema.validate('MeasurandTaxonomyCatalog.xml')
   changed-files:
+    needs: pre-merge
     runs-on: ubuntu-latest
     name: Test changed-files
     steps:
@@ -69,7 +70,9 @@ jobs:
       
       - name: Check if source and catalog changed
         id: changed-source-catalog
-        if: steps.changed-source-files.outputs.any_changed == 'true' && steps.changed-catalog-file.outputs.any_changed == 'true'
+        if: |
+          steps.changed-source-files.outputs.any_changed == 'true' && 
+          (steps.changed-catalog-file.outputs.any_changed == 'true' || steps.changed-source-files.outputs.any_deleted == 'true' || steps.changed-source-files.outputs.any_added == 'true')
         run:
           exit 1
 
