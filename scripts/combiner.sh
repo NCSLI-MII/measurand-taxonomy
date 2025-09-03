@@ -9,7 +9,7 @@
 # the following merges the files and adds the required comments.
 # Requires python environment with xmltodict and yq installed
 
-dirlist=`ls -d "$1"/*xml`
+dirlist=`LC_ALL=C ls -d -v "$1"/*xml`
 echo $dirlist
 #echo "${dirlist[@]}"
 
