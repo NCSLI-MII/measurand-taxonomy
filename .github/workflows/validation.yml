@@ -75,7 +75,7 @@ jobs:
 
       - name: Check if source files removed
         id: removed-source-files
-        if: steps.changed-source.files.outputs.any_deleted == 'true'
+        if: steps.changed-source-files.outputs.any_deleted == 'true'
         env:
           REMOVED_FILES: ${{ steps.changed-source-files.outputs.deleted_files }}
         run: |
