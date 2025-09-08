@@ -2,8 +2,8 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
 xmlns:mml="http://www.w3.org/1998/Math/MathML" 
-xmlns:uom="https://raw.githubusercontent.com/NCSLI-MII/measurand-taxonomy/main/UOM_Database" vc:minVersion="1.0" vc:maxVersion="1.1" 
-targetNamespace="https://raw.githubusercontent.com/NCSLI-MII/measurand-taxonomy/main/UOM_Database" elementFormDefault="qualified" attributeFormDefault="unqualified">
+xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database" vc:minVersion="1.0" vc:maxVersion="1.1" 
+targetNamespace="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database" elementFormDefault="qualified" attributeFormDefault="unqualified">
 <xs:annotation>
 <xs:documentation>Copyright Cal Lab Solutions 2015 all rights reserved</xs:documentation>
 </xs:annotation>
