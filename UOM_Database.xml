@@ -3329,7 +3329,7 @@
 						</uom:Alternative>
 						<uom:Alternative 
 							name="decibel-milliwatts" symbol="dBm" metric="false">
-							<LogarithmicConverter LinScaleFactor="1.0e-3" LogScaleFactor="10.0"/>
+							<uom:LogarithmicConverter LinScaleFactor="1.0e-3" LogScaleFactor="10.0"/>
 							<uom:Presentation>
 								<m:math>
 									<m:mi>dBm</m:mi>
