@@ -34,6 +34,11 @@ jobs:
   changed-files:
     needs: pre-merge
     runs-on: ubuntu-latest
+    permission:
+      # Give default GITHUB_TOKEN write permission to commit and push
+      # added or changed files during the workflow
+      contents: write
+
     name: Test changed-files
     steps:
       - uses: actions/checkout@v4
@@ -137,15 +142,27 @@ jobs:
           name: pre_merge
           path: MeasurandTaxonomyCatalog.xml
 
-      - name: Commit merge
-        id: commit-merged-catalog
+      - name: Catalog diff merge
+        id: diff-merged-catalog
         if: steps.merge-source-files.outcome == 'success'
         run: |
           cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
-          rm ./source/merge.xml
-          git config user.name github-actions
-          git config user.email git-actions@github.com
           git status
-          git diff --word-diff --color=always origin/main MeasurandTaxonomyCatalog.xml | grep -P '\+|\-' --color=never
+          git diff --word-diff --color=always origin/main MeasurandTaxonomyCatalog.xml | grep -P '\+|\-' --color=never | tee diff_merge.txt
+
+      - name: Upload catalog diff
+        uses: actions/upload-artifact@v4
+        if:  steps.merge-source-files.outcome == 'success' && steps.changed-catalog-file.outputs.any_changed == 'false'
+        with:
+          name: diff_merge
+          path: diff_merge.txt 
+      
+      - name: Cleanup 
+        if: steps.merge-source-files.outcome == 'success'
+        run: |
+          rm ./source/merge.xml
+          rm diff_merge.txt
+          git status
+
           
               
