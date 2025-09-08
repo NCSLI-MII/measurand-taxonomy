@@ -37,10 +37,10 @@ def main(*args):
     
     for taxon in taxons["mtc:Taxonomy"]["mtc:Taxon"]:
 
-        dict_ = {"Taxon":taxon}
-        dict_['Taxon']['@xmlns:mtc'] = schema_taxonomy
-        dict_['Taxon']['@xmlns:uom'] = schema_uom
-        fname =  dict_['Taxon']['@name'].replace('.', '_')+'.xml'
+        dict_ = {"mtc:Taxon":taxon}
+        dict_['mtc:Taxon']['@xmlns:mtc'] = schema_taxonomy
+        dict_['mtc:Taxon']['@xmlns:uom'] = schema_uom
+        fname =  dict_['mtc:Taxon']['@name'].replace('.', '_')+'.xml'
         
         if verbose is True:
             print(f"=====================================================")

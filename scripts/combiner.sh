@@ -9,11 +9,11 @@
 # the following merges the files and adds the required comments.
 # Requires python environment with xmltodict and yq installed
 
-dirlist=`ls -d "$1"/*xml`
+dirlist=`LC_ALL=C ls -d -v "$1"/*xml`
 echo $dirlist
 #echo "${dirlist[@]}"
 
-xq -s '{Taxonomy: {Taxon: [.[].Taxon]}} | .Taxonomy += {"@xmlns:mtc":.Taxonomy.Taxon.[0]["@xmlns:mtc"]} | .Taxonomy += {"@xmlns:uom":.Taxonomy.Taxon.[0]["@xmlns:uom"]} | del(.Taxonomy.Taxon.[]["@xmlns:mtc"]) | del(.Taxonomy.Taxon.[]["@xmlns:uom"])' $dirlist -x | tee $1/merge.xml
+xq -s '{Taxonomy: {Taxon: [.[]."mtc:Taxon"]}} | .Taxonomy += {"@xmlns:mtc":.Taxonomy.Taxon.[0]["@xmlns:mtc"]} | .Taxonomy += {"@xmlns:uom":.Taxonomy.Taxon.[0]["@xmlns:uom"]} | del(.Taxonomy.Taxon.[]["@xmlns:mtc"]) | del(.Taxonomy.Taxon.[]["@xmlns:uom"])' $dirlist -x | tee > $1/merge.xml
 
 sed -i '1 i\\<\!\-\-\
     \# Copyright\
