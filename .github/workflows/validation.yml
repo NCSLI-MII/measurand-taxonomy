@@ -149,6 +149,7 @@ jobs:
           cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
           git status
           git diff --word-diff --color=always origin/main MeasurandTaxonomyCatalog.xml | grep -P '\+|\-' --color=never | tee diff_merge.txt
+          git diff --word-diff origin/main MeasurandTaxonomyCatalog.xml | grep -P '\+|\-' --color=never | tee > diff_merge.txt
 
       - name: Upload catalog diff
         uses: actions/upload-artifact@v4
