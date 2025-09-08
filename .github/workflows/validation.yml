@@ -34,7 +34,7 @@ jobs:
   changed-files:
     needs: pre-merge
     runs-on: ubuntu-latest
-    permission:
+    permissions:
       # Give default GITHUB_TOKEN write permission to commit and push
       # added or changed files during the workflow
       contents: write
