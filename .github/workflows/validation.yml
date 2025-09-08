@@ -165,5 +165,16 @@ jobs:
           rm diff_merge.txt
           git status
 
+      - name: Commit
+        id: auto-commit-action
+        # Commit all changed files back to repository
+        uses: stefanzweifel/git-auto-commit-action@v6
+        if: steps.merge-source-files.outcome == 'success' && steps.auto-commit-action.outputs.changes_detected == 'true'
+        with:
+          commit_message: Automated change MeasurandTaxonomyCatalog PR ${{ github.event.pull_request.number }} Branch ${{ github.ref_name }}
+          file_pattern: MeasurandTaxonomyCatalog.xml
+
+ 
+
           
               
