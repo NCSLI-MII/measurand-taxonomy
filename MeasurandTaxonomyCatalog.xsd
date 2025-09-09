@@ -88,7 +88,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="list" type="mtc:List"/>
+    <xs:element name="NominalValues" type="mtc:List"/>
     
     <xs:simpleType name="List">
         <xs:list itemType="xs:string"/>
@@ -98,7 +98,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="Definition" type="xs:string" minOccurs="0"/>
-                <xs:element ref="mtc:list" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="mtc:NominalValues" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="mtc:ExternalReferences" maxOccurs="1" minOccurs="0"/>
             </xs:sequence>
             <xs:attribute name="name" type="xs:Name"/>
             <xs:attribute name="id" type="xs:Name"/>
@@ -120,7 +121,6 @@
                 <xs:element ref="uom:Quantity" maxOccurs="1" minOccurs="0"/>
                 <xs:element ref="mtc:mLayer" maxOccurs="1" minOccurs="0" />
                 <xs:element ref="mtc:ExternalQuantityType" maxOccurs="1" minOccurs="0"/>
-                <xs:element ref="mtc:list" maxOccurs="1" minOccurs="0"/>
                 <xs:element ref="mtc:Property" maxOccurs="1" minOccurs="0"/>
             </xs:sequence>            
             <xs:attribute name="name" type="xs:Name" use="required"/>

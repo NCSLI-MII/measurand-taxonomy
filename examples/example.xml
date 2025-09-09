@@ -24,10 +24,24 @@
             <uom:Quantity name="frequency"></uom:Quantity>
             <mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
     </mtc:Parameter>
-    <mtc:Parameter name="Detector" optional="true">
-        <mtc:Definition>{+Peak, -Peak, Average, PeakToPeak, RMS}</mtc:Definition>
-        <mtc:list>+Peak -Peak Average PeakToPeak RMS</mtc:list>
-        <mtc:Property name="DetectorMode" id="propertyId1234"></mtc:Property>
+    <mtc:Parameter name="DetectorType" optional="true">
+        <mtc:Definition>Detector types defined by the value of the applied signal.</mtc:Definition>
+        <mtc:Property name="Amplitude" id="propertyId1234">
+            <mtc:Definition>Specifies the method used to quantify the amplitude of a periodic or non-periodic signal.</mtc:Definition> 
+            <mtc:NominalValues>+Peak -Peak RMS PeakToPeak Mean CrestFactor</mtc:NominalValues>
+            <mtc:ExternalReferences>
+                <mtc:Reference>
+                    <mtc:CategoryTag> 
+                        <mtc:name>"International Electrotechnical Vocbaulary - Electromagnetic Compatibility"</mtc:name>
+                        <mtc:value>"IEC 60050-161"</mtc:value>
+                    </mtc:CategoryTag>
+                    <mtc:ReferenceUrl> 
+                        <mtc:name>"International Electrotechnical Vocabulary"</mtc:name> 
+                        <mtc:url>"https://www.electropedia.org"</mtc:url>
+                    </mtc:ReferenceUrl>
+                </mtc:Reference>
+            </mtc:ExternalReferences>
+        </mtc:Property>
     </mtc:Parameter>
     <mtc:Parameter name="HighPassFilter" optional="true">
             <mtc:Definition>HighPassFilter</mtc:Definition>
