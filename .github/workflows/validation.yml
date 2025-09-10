@@ -29,6 +29,10 @@ jobs:
         id: xml-validation
         run: |
             python scripts/validator.py -f MeasurandTaxonomyCatalog.xml -d ./
+      - name: XML validation
+        id: xml-validation-properties
+        run: |
+            python scripts/validator.py -f MeasurandTaxonomyProperties.xml -d ./
 
   
   changed-files:

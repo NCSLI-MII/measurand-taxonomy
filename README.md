@@ -16,6 +16,13 @@ sphinx-build -M html docs docs/build
 ```
 Open the documentation, `docs/build/html/index.html`, in your browser 
 
+## Alphanumeric codes
+Random four character assignment of codes for property identifiers.
+```
+apg -n 1 -x 4 -m 4 -M NL -a 1
+```
+Example: id="propertyIDo7d3"
+
 ## Copyright and License
 
 Copyright © 2023 by NCSL International. All rights reserved
