@@ -22,7 +22,7 @@ body:
     attributes:
       label: What is the process type? 
       description: A taxon’s first token represents the process type, taking either the value Measure or Source to identify an input-quanity or output-quantity measurement, respectively.
-      multiple: false
+      multiple: true
       options:
         - Measure
         - Source
@@ -33,7 +33,7 @@ body:
       description: Provide a description of the measurand. Simply stated, the measurand identifies what we intend to measure [VIM3](https://jcgm.bipm.org/vim/en/2.3.html). A measurement will fit its purpose to the degree that the measurand specification unambiguously and accurately describes the intent. Provide as many details to describe the measurand as possible, including links to references. 
       placeholder: Tell us what you measure! For example, Microphone Sensivity. The measurand quantity is pressure sensitivity, ratio of dynamic output voltage to dynamic pressure, typically expressed as a logarithmic level quantity to 1 V/Pa. The primary calibration method is reciprocity that entail reciprocal measurements between a pair of microphones under controlled conditions per IEC 61094-2.
     validations:
-      required: false
+      required: true
   - type: textarea
     id: quantitykind
     attributes:
@@ -41,7 +41,7 @@ body:
       description: Provide a kind of quantity for the measurand. The measure quantity's first token identifies the [kind of quantity](https://jcgm.bipm.org/vim/en/1.2.html) such as length, or in some cases a particular aspect of a kind of quantity such as thermodynamic temparture or ITS-90 temperature.
       placeholder: Voltage and Pressure
     validations:
-      required: false
+      required: true
   - type: dropdown
     id: special
     attributes:
@@ -57,14 +57,48 @@ body:
     id: parameters
     attributes:
       label: Parameters
-      description: Specify the measurand's full state such that its definitional uncertainty is insignificant to other uncertainty components. The measurand state includes input quantities, influence quantities, and instrument operating conditions. Define these as parameters in this section. For further details refer to the [parameters specification](https://measurand-taxonomy.readthedocs.io/en/latest/specification.html#parameters).
-      placeholder: 
+      description: Specify the measurand's full state such that its definitional uncertainty is insignificant to other uncertainty components. The measurand state includes its kind of quantity, input quantities, influence quantities, and instrument operating conditions. Define these as parameters in this section. For further details refer to the [parameters specification](https://measurand-taxonomy.readthedocs.io/en/latest/specification.html#parameters).
+      placeholder: Voltage Pressure Sensitivity
+    validations:
+      required: true
   - type: textarea
     id: name
     attributes:
       label: Taxon Name
       description: Propose a name following the [specification rules](https://measurand-taxonomy.readthedocs.io/en/latest/specification.html#measurand-name). This field is not required and can be left to the reviewer or expert to provide the unique taxon name.
-      placeholder: Measure.Taxon
+      placeholder: Measure.Taxon.Coefficient.Voltage.Pressure
     validations:
-      required: false
+      required: true
+  - type: textarea
+    id: reference_name
+    attributes:
+      label: External Reference Name
+      description: Provide the name of external reference 
+      placeholder: International Electrotechnical Vocabulary - 	Acoustics and electroacoustics 
+    validations:
+      required: true
+  - type: textarea
+    id: reference_value
+    attributes:
+      label: External Reference Value
+      description: Provide a value (id, controlled terminology, etc.) of external reference 
+      placeholder: IEV 801-25-60
+    validations:
+      required: true
+  - type: textarea
+    id: reference_url
+    attributes:
+      label: External Reference URL
+      description: Provide a url 
+      placeholder: https://www.electropedia.org 
+    validations:
+      required: true
+  - type: textarea
+    id: reference_url_title
+    attributes:
+      label: External Reference URL Title
+      description: Provide the title of the reference
+      placeholder: International Electrotechnical Vocabulary
+    validations:
+      required: true
   
