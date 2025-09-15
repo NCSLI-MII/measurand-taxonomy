@@ -76,7 +76,7 @@ body:
       description: Provide the name of external reference 
       placeholder: International Electrotechnical Vocabulary - 	Acoustics and electroacoustics 
     validations:
-      required: true
+      required: false
   - type: textarea
     id: reference_value
     attributes:
@@ -84,7 +84,7 @@ body:
       description: Provide a value (id, controlled terminology, etc.) of external reference 
       placeholder: IEV 801-25-60
     validations:
-      required: true
+      required: false
   - type: textarea
     id: reference_url
     attributes:
@@ -92,7 +92,7 @@ body:
       description: Provide a url 
       placeholder: https://www.electropedia.org 
     validations:
-      required: true
+      required: false
   - type: textarea
     id: reference_url_title
     attributes:
@@ -100,5 +100,5 @@ body:
       description: Provide the title of the reference
       placeholder: International Electrotechnical Vocabulary
     validations:
-      required: true
+      required: false
   
