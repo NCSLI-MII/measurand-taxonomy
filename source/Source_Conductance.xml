@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mtc:Taxon name="Source.Conductance" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
-	<mtc:Result>
+	<mtc:Result name="Conductance">
 		<uom:Quantity name="conductance"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_conductance" id="AS25"></mtc:mLayer>
 	</mtc:Result>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mtc:Taxon name="Source.Mass.Apparent" deprecated="true" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
-	<mtc:Result>
+	<mtc:Result name="Mass">
 		<uom:Quantity name="mass"></uom:Quantity>
 		<mtc:mLayer aspect="as_mass" id="AS2"></mtc:mLayer>
 	</mtc:Result>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mtc:Taxon name="Measure.Ratio.Humidity.Relative" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
-	<mtc:Result>
+	<mtc:Result name="Ratio">
 		<uom:Quantity name="ratio"></uom:Quantity>
 	</mtc:Result>
 	<mtc:Parameter name="RelativeHumidity" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="ratio"></uom:Quantity>
-		<mtc:mLayer aspect="as_relative_humidity" id="AS110"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Temperature" optional="true">
 		<mtc:Definition></mtc:Definition>
