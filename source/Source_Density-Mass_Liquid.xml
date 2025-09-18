@@ -24,8 +24,8 @@
 	</mtc:Parameter>
 	<mtc:Parameter name="NominalVolume" optional="true">
 		<mtc:Definition></mtc:Definition>
-		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<uom:Quantity name="volume"></uom:Quantity>
+		<mtc:mLayer aspect="as_volume" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Mass" optional="true">
 		<mtc:Definition></mtc:Definition>
