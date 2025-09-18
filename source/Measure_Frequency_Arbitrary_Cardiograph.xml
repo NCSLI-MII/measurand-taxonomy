@@ -9,11 +9,11 @@
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Volts" optional="true">
-		<mtc:Definition></mtc:Definition>
+	<mtc:Parameter name="Voltage" optional="true">
+		<mtc:Definition>Signal amplitude</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Time and Frequency"></mtc:Discipline>
-	<mtc:Definition>The process of generating an arbitrary Cardiograph waveform the Capacitance of a device.</mtc:Definition>
+	<mtc:Definition>The process of measuring an arbitrary Cardiograph waveform frequency.</mtc:Definition>
 </mtc:Taxon>
