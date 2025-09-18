@@ -3,7 +3,7 @@
 	<mtc:Result name="Ratio">
 		<uom:Quantity name="ratio"></uom:Quantity>
 	</mtc:Result>
-	<mtc:Parameter name="Volts" optional="false">
+	<mtc:Parameter name="DCVoltage" optional="false">
 		<mtc:Definition>DC Voltage</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
