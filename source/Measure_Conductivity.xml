@@ -14,12 +14,12 @@
 		<uom:Quantity name="length"></uom:Quantity>
 		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Volts" optional="true">
+	<mtc:Parameter name="Voltage" optional="true">
 		<mtc:Definition>Voltage between the probes</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Amps" optional="true">
+	<mtc:Parameter name="Current" optional="true">
 		<mtc:Definition>Electrical Current Expected</mtc:Definition>
 		<uom:Quantity name="current"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
