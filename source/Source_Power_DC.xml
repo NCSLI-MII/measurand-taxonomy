@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mtc:Taxon name="Source.Power.DC" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
-	<mtc:Result name="Watts">
+	<mtc:Result name="Power">
 		<uom:Quantity name="power"></uom:Quantity>
 		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
 	</mtc:Result>
-	<mtc:Parameter name="Volts" optional="false">
+	<mtc:Parameter name="Voltage" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Amps" optional="false">
+	<mtc:Parameter name="Current" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="current"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
