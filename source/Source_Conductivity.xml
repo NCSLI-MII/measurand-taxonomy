@@ -12,7 +12,7 @@
 	<mtc:Parameter name="Solution" optional="true">
 		<mtc:Definition></mtc:Definition>
 	</mtc:Parameter>
-	<mtc:Parameter name="Ohms" optional="true">
+	<mtc:Parameter name="Resistance" optional="true">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="resistance"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_resistance" id="AS24"></mtc:mLayer>
