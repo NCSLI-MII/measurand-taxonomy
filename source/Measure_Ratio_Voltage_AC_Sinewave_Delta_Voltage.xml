@@ -3,12 +3,12 @@
 	<mtc:Result name="Ratio">
 		<uom:Quantity name="ratio"></uom:Quantity>
 	</mtc:Result>
-	<mtc:Parameter name="Volts" optional="false">
+	<mtc:Parameter name="Voltage" optional="false">
 		<mtc:Definition>Measurement Voltage (RMS)</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="VoltsRef" optional="false">
+	<mtc:Parameter name="ReferenceVoltage" optional="false">
 		<mtc:Definition>Reference Voltage</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
@@ -23,5 +23,5 @@
 		<uom:Quantity name="impedance"></uom:Quantity>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
-	<mtc:Definition>A test process that measures the difference  2 sinusoidal AC sinewave signals at different voltage levels keeping the frequency constant.  The two measured values are compared, the results can be expressed as delta volts, dB or percent of change. These two signals are often used when calibrating linearity of a device.</mtc:Definition>
+	<mtc:Definition>A test process that measures the difference between sinusoidal AC sinewave signals at different voltage levels keeping the frequency constant. The two measured values are compared, the results can be expressed (e.g.) as a voltage ratio, dB or percent of change. These two signals are often used when calibrating linearity of a device.</mtc:Definition>
 </mtc:Taxon>
