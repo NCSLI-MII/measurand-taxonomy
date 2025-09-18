@@ -15,8 +15,8 @@
 	<mtc:Parameter name="Type" optional="true">
 		<mtc:Definition>{10To90, 20To80}</mtc:Definition>
 	</mtc:Parameter>
-	<mtc:Parameter name="Vpp" optional="true">
-		<mtc:Definition>Volts Peak-to-Peak</mtc:Definition>
+	<mtc:Parameter name="Voltage" optional="true">
+		<mtc:Definition>Peak-to-Peak Voltage</mtc:Definition>
 	</mtc:Parameter>
 	<mtc:Parameter name="Impedance" optional="true">
 		<mtc:Definition>Expected Impedance</mtc:Definition>
