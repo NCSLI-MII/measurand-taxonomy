@@ -9,7 +9,7 @@
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Volts" optional="false">
+	<mtc:Parameter name="ACVoltage" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
@@ -18,7 +18,7 @@
 		<mtc:Definition>Output Impedance</mtc:Definition>
 		<uom:Quantity name="impedance"></uom:Quantity>
 	</mtc:Parameter>
-	<mtc:Parameter name="Offset" optional="true">
+	<mtc:Parameter name="OffsetVoltage" optional="true">
 		<mtc:Definition>DC Offset</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
