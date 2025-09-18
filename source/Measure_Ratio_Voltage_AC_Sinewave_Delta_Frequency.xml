@@ -12,11 +12,11 @@
                         </mtc:ReferenceUrl>
                 </mtc:Reference>
         </mtc:ExternalReferences>
-        <mtc:Result name="Volts">
+        <mtc:Result name="Voltage">
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
 	</mtc:Result>
-	<mtc:Parameter name="Volts" optional="false">
+	<mtc:Parameter name="Voltage" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
@@ -35,5 +35,5 @@
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
-	<mtc:Definition>A test process that measures the difference  2 sinusoidal AC sinewave signals at different frequencies while keeping the voltage level constant.  The two measured values are compared, the results can be expressed as delta volts, dB or percent of change. These two signals are often used when calibrating flatness of a device.</mtc:Definition>
+	<mtc:Definition>A test process that measures the amplitude-response difference between two sinusoidal AC sinewave signals at different frequencies while keeping the source voltage level constant. The two measured values are compared, the results can be expressed as (e.g.) straight ratio, dB or percent of change. These two signals are often used when calibrating flatness of a device.</mtc:Definition>
 </mtc:Taxon>
