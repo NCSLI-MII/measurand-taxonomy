@@ -14,7 +14,7 @@
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Volts" optional="true">
+	<mtc:Parameter name="Voltage" optional="true">
 		<mtc:Definition>Measurement Voltage</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
