@@ -9,7 +9,7 @@
 		<uom:Quantity name="temperature"></uom:Quantity>
 		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS6"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Ohms" optional="true">
+	<mtc:Parameter name="Resistance" optional="true">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="resistance"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_resistance" id="AS24"></mtc:mLayer>
