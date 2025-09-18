@@ -12,7 +12,7 @@
 	<mtc:Parameter name="ThermocoupleType" optional="false">
 		<mtc:Definition>{B, C, D, E, G, J, K, M, N, P, R, S, T}</mtc:Definition>
 	</mtc:Parameter>
-	<mtc:Parameter name="Volts" optional="true">
+	<mtc:Parameter name="Voltage" optional="true">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
