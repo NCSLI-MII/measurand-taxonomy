@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mtc:Taxon name="Measure.Frequency.AmplitudeModulation.Rate" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
-	<mtc:Result name="Rate">
+	<mtc:Result name="AMRate">
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Result>
@@ -9,8 +9,8 @@
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Rate" optional="false">
-		<mtc:Definition>Modulation Rate Frequency</mtc:Definition>
+	<mtc:Parameter name="AMRate" optional="false">
+		<mtc:Definition>Modulation Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
@@ -19,8 +19,8 @@
 		<uom:Quantity name="power"></uom:Quantity>
 		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="Modulation" optional="true">
-		<mtc:Definition>Percent of Amplitude Modulation</mtc:Definition>
+	<mtc:Parameter name="AMDepth" optional="true">
+		<mtc:Definition>Depth of Amplitude Modulation</mtc:Definition>
 		<uom:Quantity name="ratio"></uom:Quantity>
 	</mtc:Parameter>
 	<mtc:Parameter name="Detector" optional="true">
