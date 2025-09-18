@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mtc:Taxon name="Measure.Current.AC.Trianglewave" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
-	<mtc:Result name="Amps">
+	<mtc:Result name="Current">
 		<uom:Quantity name="current"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
 	</mtc:Result>
-	<mtc:Parameter name="Amps" optional="false">
+	<mtc:Parameter name="Current" optional="false">
 		<mtc:Definition>Measured Current</mtc:Definition>
 		<uom:Quantity name="current"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
