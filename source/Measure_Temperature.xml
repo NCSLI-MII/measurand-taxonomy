@@ -4,7 +4,7 @@
 		<uom:Quantity name="temperature"></uom:Quantity>
 		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS6"></mtc:mLayer>
 	</mtc:Result>
-	<mtc:Parameter name="Temperture" optional="false">
+	<mtc:Parameter name="Temperature" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="temperature"></uom:Quantity>
 		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS6"></mtc:mLayer>
