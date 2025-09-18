@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mtc:Taxon name="Source.Voltage.DC.Delta.Voltage" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
-	<mtc:Result name="DeltaVolts">
+	<mtc:Result name="DeltaVoltage">
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
 	</mtc:Result>
-	<mtc:Parameter name="Volts" optional="false">
+	<mtc:Parameter name="Voltage" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
-	<mtc:Parameter name="VoltsRef" optional="false">
+	<mtc:Parameter name="ReferenceVoltage optional="false">
 		<mtc:Definition>Reference Voltage</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
@@ -19,5 +19,5 @@
 		<uom:Quantity name="impedance"></uom:Quantity>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
-	<mtc:Definition>The process of sourcing 2 DC (Direct Current) voltage signals.  First the VoltsRef signal is sourced and measured on the UUT, that value is stored as reference.  Then the test Volts signal is sourced and measured on the UUT and stored as reading.  The test result is returned as (reading – reference). These two voltage signals are often used when calibrating the DC gain of a device such as an Oscilloscope.</mtc:Definition>
+	<mtc:Definition>The process of sourcing two DC (Direct Current) voltage signals. First the ReferenceVoltage signal is sourced and measured on the UUT, that value is stored as reference. Then the test Voltage is sourced and measured on the UUT and stored as reading. The test result is returned as (reading – reference). These two voltage signals are often used when calibrating the DC gain of a device such as an oscilloscope.</mtc:Definition>
 </mtc:Taxon>
