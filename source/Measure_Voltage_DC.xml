@@ -12,11 +12,11 @@
                         </mtc:ReferenceUrl>
                 </mtc:Reference>
         </mtc:ExternalReferences>
-	<mtc:Result name="Volts">
+	<mtc:Result name="Voltage">
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
 	</mtc:Result>
-	<mtc:Parameter name="Volts" optional="false">
+	<mtc:Parameter name="Voltage" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
 		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
