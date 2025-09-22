@@ -13,14 +13,25 @@ Optional input taxonomy file can passed for validation.
 Requires python environment with xmlschema
 """
 
+import lxml.etree as ET
 import xmlschema
+
 import argparse
 import time
 from pathlib import Path
 
 def validate(*args):
     schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
+    xml_doc = ET.parse(args[0])
     schema.validate(args[0])
+    try:
+        schema.validate(args[0])
+    except Exception as e:
+        for error in schema.iter_errors(xml_doc):
+            print('===================')
+            print(f'file: {name}; sourceline: {error.sourceline}; path: {error.path} | reason: {error.reason} | message: {error.message}')
+            print('===================')
+        raise e
 
 def validate_list(*args):
     schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
@@ -30,11 +41,12 @@ def validate_list(*args):
     for name in lst:
         p = Path(args[0])
         f = p / name
+        xml_doc = ET.parse(f)
         print(f)
         try:
             schema.validate(f)
         except Exception as e:
-            for error in schema.iter_errors(f):
+            for error in schema.iter_errors(xml_doc):
                 print('===================')
                 print(f'file: {name}; sourceline: {error.sourceline}; path: {error.path} | reason: {error.reason} | message: {error.message}')
                 print('===================')
