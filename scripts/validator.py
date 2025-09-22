@@ -35,7 +35,9 @@ def validate_list(*args):
             schema.validate(f)
         except Exception as e:
             for error in schema.iter_errors(f):
-                print(f'sourceline: {error.sourceline}; path: {error.path} | reason: {error.reason} | message: {error.message}')
+                print('===================')
+                print(f'file: {name}; sourceline: {error.sourceline}; path: {error.path} | reason: {error.reason} | message: {error.message}')
+                print('===================')
             raise e
 
 if __name__ == '__main__':
