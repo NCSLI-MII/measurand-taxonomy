@@ -3,7 +3,7 @@
         <mtc:ExternalReferences>
                 <mtc:Reference>
                         <mtc:CategoryTag>
-                            <mtc:name>High Voltage DC
+                            <mtc:name>High Voltage DC</mtc:name>
                             <mtc:value>8.1</mtc:value>
                         </mtc:CategoryTag>
                         <mtc:ReferenceUrl>
