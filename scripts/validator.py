@@ -22,16 +22,20 @@ from pathlib import Path
 
 def validate(*args):
     schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
-    xml_doc = ET.parse(args[0])
-    schema.validate(args[0])
+    print(f'Validating file: {file_}')
     try:
-        schema.validate(args[0])
+        xml_doc = ET.parse(args[0])
     except Exception as e:
-        for error in schema.iter_errors(xml_doc):
-            print('===================')
-            print(f'file: {name}; sourceline: {error.sourceline}; path: {error.path} | reason: {error.reason} | message: {error.message}')
-            print('===================')
         raise e
+    else:
+        try:
+            schema.validate(args[0])
+        except Exception as e:
+            for error in schema.iter_errors(xml_doc):
+                print('===================')
+                print(f'file: {name}; sourceline: {error.sourceline}; path: {error.path} | reason: {error.reason} | message: {error.message}')
+                print('===================')
+            raise e
 
 def validate_list(*args):
     schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
@@ -40,17 +44,21 @@ def validate_list(*args):
 
     for name in lst:
         p = Path(args[0])
-        f = p / name
-        xml_doc = ET.parse(f)
-        print(f)
+        file_ = p / name
+        print(f'Validating file from list: {file_}')
         try:
-            schema.validate(f)
+            xml_doc = ET.parse(file_)
         except Exception as e:
-            for error in schema.iter_errors(xml_doc):
-                print('===================')
-                print(f'file: {name}; sourceline: {error.sourceline}; path: {error.path} | reason: {error.reason} | message: {error.message}')
-                print('===================')
             raise e
+        else:
+            try:
+                schema.validate(file_)
+            except Exception as e:
+                for error in schema.iter_errors(xml_doc):
+                    print('===================')
+                    print(f'file: {name}; sourceline: {error.sourceline}; path: {error.path} | reason: {error.reason} | message: {error.message}')
+                    print('===================')
+                raise e
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
