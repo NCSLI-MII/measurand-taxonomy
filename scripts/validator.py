@@ -22,7 +22,7 @@ from pathlib import Path
 
 def validate(*args):
     schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
-    print(f'Validating file: {file_}')
+    print(f'Validating file: {args[0]}')
     try:
         xml_doc = ET.parse(args[0])
     except Exception as e:
