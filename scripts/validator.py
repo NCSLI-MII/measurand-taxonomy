@@ -31,7 +31,12 @@ def validate_list(*args):
         p = Path(args[0])
         f = p / name
         print(f)
-        schema.validate(f)
+        try:
+            schema.validate(f)
+        except Exception as e:
+            for error in schema.iter_errors(f):
+                print(f'sourceline: {error.sourceline}; path: {error.path} | reason: {error.reason} | message: {error.message}')
+            raise e
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
@@ -39,7 +44,6 @@ if __name__ == '__main__':
             description='Validates taxonomy and schema'
             )
     parser.add_argument('-f', '--filename', 
-            default='MeasurandTaxonomyCatalog.xml', 
             help="Input taxonomy file")
     parser.add_argument('-d', '--dirpath', help="Output directory")
     parser.add_argument('-v', '--verbose', action='store_true')
