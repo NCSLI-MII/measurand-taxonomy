@@ -1,0 +1,22 @@
+name: prapproval
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number: 
+        description: 'PR number to approve'
+        required: true
+        type: string
+
+jobs:
+  prapprove:
+    runs-on: ubuntu_latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Approve PR
+        run: |
+          gh pr review ${{ inputs.pr_number }} --approve
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+
