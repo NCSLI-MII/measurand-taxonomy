@@ -2,9 +2,10 @@ name: prapproval
 on:
   workflow_dispatch:
     inputs:
-      pr_number: 'PR number to approve'
-      required: true
-      type: string
+      pr_number: 
+        description: 'PR number to approve'
+        required: true
+        type: string
 
 jobs:
   prapprove:
