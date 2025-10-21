@@ -8,6 +8,7 @@ on:
     types: [completed]
 
 jobs:
+  name: Approve commit
   approve:
     if: |
       github.event.review.state == 'approved' &&
