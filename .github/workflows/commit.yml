@@ -9,7 +9,6 @@ on:
 
 jobs:
   approve:
-    needs: [pre-merge, changed-files]
     if: |
       github.event.review.state == 'approved' &&
       github.event.workflow_run.conclusion == 'success'
