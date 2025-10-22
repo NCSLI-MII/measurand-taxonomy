@@ -9,10 +9,10 @@ on:
 
 jobs:
   approve:
-    # Require validation workflow success and
-    # PR approved
+    # Run autocommit if validation workflow is successful and
+    # PR is approved
     # github.event.review.state == 'approved' &&
-    if: |
+    if: |      
       github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
