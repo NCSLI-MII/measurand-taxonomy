@@ -9,8 +9,10 @@ on:
 
 jobs:
   approve:
+    # Require validation workflow success and
+    # PR approved
+    # github.event.review.state == 'approved' &&
     if: |
-      #github.event.review.state == 'approved' &&
       github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
