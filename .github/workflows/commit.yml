@@ -1,0 +1,67 @@
+name: commit
+on:
+  pull_request_review: 
+    types: [submitted]
+    branches: [main]
+  workflow_run:
+    workflows: [validation]
+    types: [completed]
+
+jobs:
+  name: Approve commit
+  approve:
+    if: |
+      github.event.review.state == 'approved' &&
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      # Give default GITHUB_TOKEN write permission to commit and push
+      # added or changed files during the workflow
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+            python -m pip install --upgrade pip
+            pip install xmlschema
+            pip install lxml
+            pip install yq
+      - name: Merge source files
+        id: merge-source-files
+        run: |
+          sh scripts/combiner.sh ./source
+          python scripts/validator.py -f merge.xml -d ./source
+      
+      - name: Catalog diff merge
+        id: cp-catalog
+        if: steps.merge-source-files.outcome == 'success'
+        run: |
+          cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
+          rm .source/merge.xml
+      
+      - name: Commit
+      - id: auto-commit-action
+        if: steps.merge-source-files.outcome == 'success'
+        run: |
+          echo "Ready for autocommit"
+
+          #- name: Commit
+          #id: auto-commit-action
+        # Commit all changed files back to repository
+        #uses: stefanzweifel/git-auto-commit-action@v6
+        #if: steps.merge-source-files.outcome == 'success' 
+        #with:
+        #  commit_message: Automated change MeasurandTaxonomyCatalog PR ${{ github.event.pull_request.number }} Branch ${{ github.ref_name }}
+        #  file_pattern: 'MeasurandTaxonomyCatalog.xml'
+
+          #- name: post-commit
+          #if: steps.auto-commit-action.outputs.changes_detected == 'true'
+          #run: |
+          #echo "Changes detected"
+
