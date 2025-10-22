@@ -1,4 +1,4 @@
-name: commit
+name: approvecommit
 on:
   pull_request_review: 
     types: [submitted]
@@ -45,7 +45,7 @@ jobs:
           rm .source/merge.xml
       
       - name: Commit
-      - id: auto-commit-action
+        id: auto-commit-action
         if: steps.merge-source-files.outcome == 'success'
         run: |
           echo "Ready for autocommit"
