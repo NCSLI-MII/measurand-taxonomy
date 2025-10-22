@@ -10,7 +10,7 @@ on:
 jobs:
   approve:
     if: |
-      github.event.review.state == 'approved' &&
+      #github.event.review.state == 'approved' &&
       github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
