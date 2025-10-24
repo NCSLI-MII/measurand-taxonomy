@@ -13,8 +13,7 @@ jobs:
     # PR is approved
     # github.event.review.state == 'approved' &&
     if: |    
-      github.event.review.state == 'approved' &&
-      github.event.workflow_run.conclusion == 'success'
+       github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
       # Give default GITHUB_TOKEN write permission to commit and push
