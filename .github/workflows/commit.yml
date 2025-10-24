@@ -6,6 +6,7 @@ on:
   workflow_run:
     workflows: [validation]
     types: [completed]
+  workflow_dispatch:
 
 jobs:
   approve:
