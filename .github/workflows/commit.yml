@@ -1,7 +1,7 @@
 name: approvecommit
 on:
   pull_request_review: 
-    types: [submitted]
+    types: [submitted, edited, dismissed]
     branches: [main,dev]
   workflow_run:
     workflows: [validation]
@@ -29,7 +29,7 @@ jobs:
           python-version: '3.10'
       - name: Dump GitHub Context
         env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+          GITHUB_CONTEXT: ${{ toJson(github.event) }}
         run: echo "$GITHUB_CONTEXT"
       - name: Install dependencies
         run: |
