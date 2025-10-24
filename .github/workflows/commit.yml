@@ -2,7 +2,7 @@ name: approvecommit
 on:
   pull_request_review: 
     types: [submitted]
-    branches: [main]
+    branches: [main,dev]
   workflow_run:
     workflows: [validation]
     types: [completed]
