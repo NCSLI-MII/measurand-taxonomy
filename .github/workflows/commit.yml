@@ -13,21 +13,24 @@ jobs:
     # PR is approved
     # github.event.review.state == 'approved' &&
     if: |    
-      github.event.review.state == 'approved' &&
-      github.event.workflow_run.conclusion == 'success'
+       github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
       # Give default GITHUB_TOKEN write permission to commit and push
       # added or changed files during the workflow
       contents: write
 
-    steps:
+    steps: 
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
       - uses: actions/setup-python@v2
         with:
           python-version: '3.10'
+      - name: Dump GitHub Context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - name: Install dependencies
         run: |
             python -m pip install --upgrade pip
@@ -54,8 +57,6 @@ jobs:
           echo "Ready for autocommit"
           git status
 
-          #- name: Commit
-          #id: auto-commit-action
         # Commit all changed files back to repository
         #uses: stefanzweifel/git-auto-commit-action@v6
         #if: steps.merge-source-files.outcome == 'success' 
