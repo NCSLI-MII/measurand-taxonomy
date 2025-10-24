@@ -1,4 +1,4 @@
-name: commit
+name: approvecommit
 on:
   pull_request_review: 
     types: [submitted]
@@ -9,7 +9,10 @@ on:
 
 jobs:
   approve:
-    if: |
+    # Run autocommit if validation workflow is successful and
+    # PR is approved
+    # github.event.review.state == 'approved' &&
+    if: |    
       github.event.review.state == 'approved' &&
       github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
@@ -42,13 +45,14 @@ jobs:
         if: steps.merge-source-files.outcome == 'success'
         run: |
           cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
-          rm .source/merge.xml
+          rm ./source/merge.xml
       
       - name: Commit
-      - id: auto-commit-action
+        id: auto-commit-action
         if: steps.merge-source-files.outcome == 'success'
         run: |
           echo "Ready for autocommit"
+          git status
 
           #- name: Commit
           #id: auto-commit-action
