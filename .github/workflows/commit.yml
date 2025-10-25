@@ -1,20 +1,21 @@
 name: approvecommit
 on:
   pull_request_review: 
-    types: [submitted]
+    types: [submitted, edited, dismissed]
     branches: [main,dev]
-  workflow_run:
-    workflows: [validation]
-    types: [completed]
+  # workflow_run:
+    # workflows: [validation]
+    # types: [completed]
   workflow_dispatch:
 
 jobs:
   approve:
     # Run autocommit if validation workflow is successful and
     # PR is approved
-    # github.event.review.state == 'approved' &&
+#github.event.workflow_run.conclusion == 'success'
+    #  &&
     if: |    
-       github.event.workflow_run.conclusion == 'success'
+       github.event.review.state == 'approved'
     runs-on: ubuntu-latest
     permissions:
       # Give default GITHUB_TOKEN write permission to commit and push
@@ -30,7 +31,7 @@ jobs:
           python-version: '3.10'
       - name: Dump GitHub Context
         env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+          GITHUB_CONTEXT: ${{ toJson(github.event) }}
         run: echo "$GITHUB_CONTEXT"
       - name: Install dependencies
         run: |
