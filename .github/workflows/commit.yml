@@ -19,7 +19,7 @@ jobs:
           - name: Log PR event Context
             env:
               GITHUB_CONTEXT: ${{ toJson(github.event) }}
-              run: echo "$GITHUB_CONTEXT"
+            run: echo "$GITHUB_CONTEXT"
           
   approve:
     # Run autocommit if validation workflow is successful and
