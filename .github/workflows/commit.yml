@@ -1,8 +1,8 @@
 name: approvecommit
 on:
   pull_request_review: 
-    types: [submitted, edited, dismissed]
-    branches: [main,dev]
+    types: [submitted]
+    branches: [main,development]
   #workflow_run:
     #workflows: [validation]
     #types: [completed]
