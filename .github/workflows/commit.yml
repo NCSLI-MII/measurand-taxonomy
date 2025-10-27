@@ -3,17 +3,16 @@ on:
   pull_request_review: 
     types: [submitted, edited, dismissed]
     branches: [main,dev]
-  # workflow_run:
-    # workflows: [validation]
-    # types: [completed]
-  workflow_dispatch:
+  #workflow_run:
+    #workflows: [validation]
+    #types: [completed]
+  #workflow_dispatch:
 
 jobs:
   approve:
     # Run autocommit if validation workflow is successful and
     # PR is approved
-#github.event.workflow_run.conclusion == 'success'
-    #  &&
+ # github.event.workflow_run.conclusion == 'success'
     if: |    
        github.event.review.state == 'approved'
     runs-on: ubuntu-latest
