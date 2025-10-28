@@ -3,10 +3,6 @@ on:
   pull_request_review: 
     types: [submitted]
     branches: [main,development]
-  #workflow_run:
-    #workflows: [validation]
-    #types: [completed]
-  #workflow_dispatch:
 
 jobs:
   log_details:
@@ -26,12 +22,12 @@ jobs:
             run: echo "$GITHUB_CONTEXT"
           
   approve:
+    runs-on: ubuntu-latest
     # Run autocommit if validation workflow is successful and
     # PR is approved
  # github.event.workflow_run.conclusion == 'success'
     if: |    
        github.event.review.state == 'approved'
-    runs-on: ubuntu-latest
     permissions:
       # Give default GITHUB_TOKEN write permission to commit and push
       # added or changed files during the workflow
