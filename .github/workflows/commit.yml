@@ -3,6 +3,11 @@ on:
   pull_request_review: 
     types: [submitted,edited,dismissed]
     branches: [main,development]
+  #workflow_run:
+    #workflows: [validation]
+    #types: [completed]
+
+
 
 jobs:
   log_details:
@@ -23,11 +28,11 @@ jobs:
           
   approve:
     runs-on: ubuntu-latest
-    # Run autocommit if validation workflow is successful and
-    # PR is approved
- # github.event.workflow_run.conclusion == 'success'
+    # Run autocommit if PR is approved 
+    # Use workflow run to enforce validation success as well
+    # github.event.workflow_run.conclusion == 'success'
     if: |    
-       github.event.review.state == 'dismissed'
+       github.event.review.state == 'approved'
     permissions:
       # Give default GITHUB_TOKEN write permission to commit and push
       # added or changed files during the workflow
@@ -36,14 +41,17 @@ jobs:
     steps: 
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.event.pull_request.head.ref }}
       - uses: actions/setup-python@v2
         with:
           python-version: '3.10'
       - name: Dump GitHub Context
         env:
           GITHUB_CONTEXT: ${{ toJson(github.event) }}
-        run: echo "$GITHUB_CONTEXT"
+        run: |
+          echo ${{ github.head_ref }}
+          echo ${{ github.event.pull_request.head.sha }}
+          echo ${{ github.event.pull_request.head.ref }}
       - name: Install dependencies
         run: |
             python -m pip install --upgrade pip
@@ -72,8 +80,7 @@ jobs:
         if: steps.merge-source-files.outcome == 'success' 
         with:
           commit_message: Automated test change MeasurandTaxonomyCatalog PR ${{ github.event.pull_request.number }} Branch ${{ github.ref_name }}
-          commit_options: '--allow-empty'
-          #file_pattern: 'MeasurandTaxonomyCatalog.xml'
+          file_pattern: 'MeasurandTaxonomyCatalog.xml'
 
       - name: post-commit
         if: steps.auto-commit-action.outputs.changes_detected == 'true'
