@@ -21,10 +21,6 @@ jobs:
             env:
               GITHUB_CONTEXT: ${{ toJson(github.event) }}
             run: echo "$GITHUB_CONTEXT"
-          - name: Log PR event review context
-            env:
-              GITHUB_CONTEXT: ${{ toJson(github.event.review) }}
-            run: echo "$GITHUB_CONTEXT"
           
   approve:
     runs-on: ubuntu-latest
@@ -48,6 +44,7 @@ jobs:
       - name: Dump GitHub branch refs
         run: |
           echo "head_ref: ${{ github.head_ref }}"
+          echo "ref_name: ${{ github.ref_name }}"
           echo "pull_request.head.sha: ${{ github.event.pull_request.head.sha }}"
           echo "pull_request.head.ref: ${{ github.event.pull_request.head.ref }}"
       - name: Install dependencies
