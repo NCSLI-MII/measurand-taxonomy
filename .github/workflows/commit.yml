@@ -45,13 +45,11 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.10'
-      - name: Dump GitHub Context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github.event) }}
+      - name: Dump GitHub branch refs
         run: |
-          echo ${{ github.head_ref }}
-          echo ${{ github.event.pull_request.head.sha }}
-          echo ${{ github.event.pull_request.head.ref }}
+          echo "head_ref: ${{ github.head_ref }}"
+          echo "pull_request.head.sha: ${{ github.event.pull_request.head.sha }}"
+          echo "pull_request.head.ref: ${{ github.event.pull_request.head.ref }}"
       - name: Install dependencies
         run: |
             python -m pip install --upgrade pip
@@ -79,7 +77,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v6
         if: steps.merge-source-files.outcome == 'success' 
         with:
-          commit_message: Automated test change MeasurandTaxonomyCatalog PR ${{ github.event.pull_request.number }} Branch ${{ github.ref_name }}
+          commit_message: Automated source merge commit to MeasurandTaxonomyCatalog PR ${{ github.event.pull_request.number }} Branch ${{ github.event.pull_request.head.ref }}
           file_pattern: 'MeasurandTaxonomyCatalog.xml'
 
       - name: post-commit
