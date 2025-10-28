@@ -68,6 +68,6 @@ jobs:
 
       - name: post-commit
         if: steps.auto-commit-action.outputs.changes_detected == 'true'
-          run: |
-            echo "Changes detected"
+        run: |
+          echo "Changes detected"
 
