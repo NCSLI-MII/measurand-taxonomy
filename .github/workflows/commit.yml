@@ -27,7 +27,7 @@ jobs:
     # PR is approved
  # github.event.workflow_run.conclusion == 'success'
     if: |    
-       github.event.review.state == 'approved'
+       github.event.review.state == 'dismissed'
     permissions:
       # Give default GITHUB_TOKEN write permission to commit and push
       # added or changed files during the workflow
@@ -62,6 +62,8 @@ jobs:
         run: |
           cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
           rm ./source/merge.xml
+          git branch 
+          git status
       
       - name: Commit
         id: auto-commit-action
