@@ -1,7 +1,7 @@
 name: approvecommit
 on:
   pull_request_review: 
-    types: [submitted]
+    types: [submitted,edited,dismissed]
     branches: [main,development]
 
 jobs:
