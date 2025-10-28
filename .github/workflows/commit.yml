@@ -1,7 +1,7 @@
 name: approvecommit
 on:
   pull_request_review: 
-    types: [submitted]
+    types: [submitted,edited,dismissed]
     branches: [main,development]
   #workflow_run:
     #workflows: [validation]
@@ -12,10 +12,10 @@ jobs:
   approve:
     # Run autocommit if validation workflow is successful and
     # PR is approved
- # github.event.workflow_run.conclusion == 'success'
-    # ' &&
+    # Include workflow run to enforce validation and approval
+    # github.event.workflow_run.conclusion == 'success'
     if: |    
-       github.event.review.state == 'approved'
+       github.event.review.state == 'dismissed'
     runs-on: ubuntu-latest
     permissions:
       # Give default GITHUB_TOKEN write permission to commit and push
