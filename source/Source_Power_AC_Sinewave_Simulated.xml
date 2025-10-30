@@ -4,7 +4,8 @@
 		<uom:Quantity name="power"></uom:Quantity>
 		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
 	</mtc:Result>
-	<mtc:Parameter name="Power" optional="false">
+        <mtc:Parameter name="Power" optional="false">
+		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="power"></uom:Quantity>
 		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
 	</mtc:Parameter>

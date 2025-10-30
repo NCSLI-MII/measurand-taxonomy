@@ -4,15 +4,15 @@
 		<uom:Quantity name="power"></uom:Quantity>
 		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
 	</mtc:Result>
-	<mtc:Parameter name="Frequency" optional="false">
-		<mtc:Definition></mtc:Definition>
-		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
-	</mtc:Parameter>
 	<mtc:Parameter name="Power" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="power"></uom:Quantity>
 		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Frequency" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="frequency"></uom:Quantity>
+		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Impedance" optional="true">
 		<mtc:Definition>Expected measurement Impedance</mtc:Definition>

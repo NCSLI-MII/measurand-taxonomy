@@ -4,6 +4,11 @@
 		<uom:Quantity name="power"></uom:Quantity>
 		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
 	</mtc:Result>
+	<mtc:Parameter name="Power" optional="false">
+		<mtc:Definition>Measurement Power</mtc:Definition>
+		<uom:Quantity name="power"></uom:Quantity>
+		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
+	</mtc:Parameter>
 	<mtc:Parameter name="Frequency" optional="false">
 		<mtc:Definition>Measurement Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
@@ -13,11 +18,6 @@
 		<mtc:Definition>Reference Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
 		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
-	</mtc:Parameter>
-	<mtc:Parameter name="Power" optional="false">
-		<mtc:Definition>Measurement Power</mtc:Definition>
-		<uom:Quantity name="power"></uom:Quantity>
-		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
 	<mtc:Definition>A test process that measures the difference between 2 sinusoidal RF  signals at different frequencies while keeping the power levels constant.  The two measured values are compared, the results can be expressed as dB or percent of change. These two signals are often used when calibrating flatness of a signal generator or similar device.</mtc:Definition>
