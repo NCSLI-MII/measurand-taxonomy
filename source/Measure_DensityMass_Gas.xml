@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mtc:Taxon name="Measure.Density-Mass.Gas" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+<mtc:Taxon name="Measure.DensityMass.Gas" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Density">
-		<uom:Quantity name="density-mass"></uom:Quantity>
+            <uom:Quantity name="density-mass"></uom:Quantity>
+            <mtc:mLayer aspect="as_volumetric_mass_density" id="AS41"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Density" optional="false">
 		<mtc:Definition>Density of the Gas</mtc:Definition>
-		<uom:Quantity name="density-mass"></uom:Quantity>
+                <uom:Quantity name="density-mass"></uom:Quantity>
+                <mtc:mLayer aspect="as_volumetric_mass_density" id="AS41"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Pressure" optional="false">
 		<mtc:Definition>Pressure of the Gas</mtc:Definition>
@@ -15,7 +17,7 @@
 	<mtc:Parameter name="Temperature" optional="false">
 		<mtc:Definition>Temperature of the Gas</mtc:Definition>
 		<uom:Quantity name="temperature"></uom:Quantity>
-		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS6"></mtc:mLayer>
+		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS101"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Volume" optional="true">
 		<mtc:Definition>Volume of the Gas</mtc:Definition>

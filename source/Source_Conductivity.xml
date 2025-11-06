@@ -2,12 +2,12 @@
 <mtc:Taxon name="Source.Conductivity" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Conductivity">
 		<uom:Quantity name="conductivity"></uom:Quantity>
-		<mtc:mLayer aspect="as_conductivity" id="AS91"></mtc:mLayer>
+		<mtc:mLayer aspect="as_electric_conductivity" id="AS91"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Conductivity" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="conductivity"></uom:Quantity>
-		<mtc:mLayer aspect="as_conductivity" id="AS91"></mtc:mLayer>
+		<mtc:mLayer aspect="as_electric_conductivity" id="AS91"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Solution" optional="true">
 		<mtc:Definition></mtc:Definition>

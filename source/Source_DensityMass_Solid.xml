@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mtc:Taxon name="Source.Density-Mass.Solid" deprecated="true" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
+<mtc:Taxon name="Source.DensityMass.Solid" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Density">
-		<uom:Quantity name="density-mass"></uom:Quantity>
+            <uom:Quantity name="density-mass"></uom:Quantity>
+            <mtc:mLayer aspect="as_volumetric_mass_density" id="AS41"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Density" optional="false">
 		<mtc:Definition></mtc:Definition>
