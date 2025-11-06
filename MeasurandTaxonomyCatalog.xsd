@@ -183,7 +183,7 @@
             </xs:sequence>
             <xs:attribute form="unqualified" name="name" type="xs:Name" use="required"/>
             <xs:attribute default="false" name="deprecated" type="xs:boolean"/>
-            <xs:attribute default="false" name="replacement" type="xs:string"/>
+            <xs:attribute default="" name="replacement" type="xs:string"/>
         </xs:complexType>
     </xs:element>
     
