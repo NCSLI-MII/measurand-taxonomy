@@ -116,7 +116,7 @@
     <mtc:Parameter name="Temperature" optional="true">
       <mtc:Definition>usually 20 °C</mtc:Definition>
       <uom:Quantity name="temperature"></uom:Quantity>
-      <mtc:mLayer aspect="as_thermodynamic_temperature" id="AS6"></mtc:mLayer>
+      <mtc:mLayer aspect="as_thermodynamic_temperature" id="AS101"></mtc:mLayer>
     </mtc:Parameter>
     <mtc:Discipline name="Chemical"></mtc:Discipline>
     <mtc:Definition>The process of measuring the Electrical Conductivity of a Solution or a device.</mtc:Definition>
@@ -3387,7 +3387,7 @@
   <mtc:Taxon name="Source.Temperature.FixedPoint" deprecated="true" replacement="Source.Temperature.FixedPoint.ITS90">
     <mtc:Result name="Temperature">
       <uom:Quantity name="temperature"></uom:Quantity>
-      <mtc:mLayer aspect="as_IST90" id="AS104"></mtc:mLayer>
+      <mtc:mLayer aspect="as_ITS90" id="AS104"></mtc:mLayer>
     </mtc:Result>
     <mtc:Parameter name="Substance" optional="false">
       <mtc:Definition></mtc:Definition>
