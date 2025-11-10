@@ -27,7 +27,7 @@
 	<mtc:Parameter name="Temperature" optional="true">
 		<mtc:Definition>usually 20 °C</mtc:Definition>
 		<uom:Quantity name="temperature"></uom:Quantity>
-		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS6"></mtc:mLayer>
+		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS101"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Chemical"></mtc:Discipline>
 	<mtc:Definition>The process of measuring the Electrical Conductivity of a Solution or a device.</mtc:Definition>
