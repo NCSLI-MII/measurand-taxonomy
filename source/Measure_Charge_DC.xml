@@ -13,7 +13,8 @@
 		</mtc:Reference>
 	</mtc:ExternalReferences>
 	<mtc:Result name="Charge">
-		<mtc:mLayer aspect="as_electric_charge" id="AS21"></mtc:mLayer>
+            <uom:Quantity name="charge"></uom:Quantity>
+            <mtc:mLayer aspect="as_electric_charge" id="AS21"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Charge" optional="false">
 		<mtc:Definition>the measured charge</mtc:Definition>
