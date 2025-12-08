@@ -75,6 +75,34 @@
     <mtc:Discipline name="Electrical"></mtc:Discipline>
     <mtc:Definition>The measurement of the capacitance of a device.</mtc:Definition>
   </mtc:Taxon>
+  <mtc:Taxon name="Measure.Charge.DC" deprecated="false" replacement="">
+    <mtc:ExternalReferences>
+      <mtc:Reference>
+        <mtc:CategoryTag>
+          <mtc:name>IEC Electrotechnical Vocabulary</mtc:name>
+          <mtc:value>electric charge</mtc:value>
+        </mtc:CategoryTag>
+        <mtc:ReferenceUrl>
+          <mtc:name>113-02-10</mtc:name>
+          <mtc:url>https://www.electropedia.org/iev/iev.nsf/display?openform&amp;ievref=113-02-10</mtc:url>
+        </mtc:ReferenceUrl>
+      </mtc:Reference>
+    </mtc:ExternalReferences>
+    <mtc:Result name="Charge">
+      <uom:Quantity name="charge"></uom:Quantity>
+      <mtc:mLayer aspect="as_electric_charge" id="AS21"></mtc:mLayer>
+    </mtc:Result>
+    <mtc:Parameter name="Charge" optional="false">
+      <mtc:Definition>the measured charge</mtc:Definition>
+      <mtc:mLayer aspect="as_electric_charge" id="AS21"></mtc:mLayer>
+    </mtc:Parameter>
+    <mtc:Parameter name="VoltageDC" optional="true">
+      <mtc:Definition>peak DC voltage presented to the measurement standard's 50 ohm input</mtc:Definition>
+      <mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+    </mtc:Parameter>
+    <mtc:Discipline name=""></mtc:Discipline>
+    <mtc:Definition>This process measures electric charge sourced in direct-current mode.</mtc:Definition>
+  </mtc:Taxon>
   <mtc:Taxon name="Measure.Conductance" deprecated="false" replacement="">
     <mtc:Result name="Conductance">
       <uom:Quantity name="conductance"></uom:Quantity>
