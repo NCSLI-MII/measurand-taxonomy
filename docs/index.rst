@@ -10,8 +10,6 @@ Welcome to mii-taxonomy's documentation!
    :maxdepth: 2
    :caption: Contents:
    
-   copyright
-   license
    specification
    taxonomy
    references

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Relative-Humidity" deprecated="false" replacement="">
+  <mtc:ExternalReferences>
+    <mtc:Reference>
+      <mtc:ReferenceUrl>
+        <mtc:name />
+        <mtc:url />
+      </mtc:ReferenceUrl>
+    </mtc:Reference>
+  </mtc:ExternalReferences>
+  <mtc:Result name="Humidity">
+    <uom:Quantity name="relative-humidity" />
+  </mtc:Result>
+  <mtc:Parameter name="Humidity" optional="false">
+    <uom:Quantity name="relative-humidity" />
+    <mtc:Definition>Humidity Measured</mtc:Definition>
+  </mtc:Parameter>
+  <mtc:Parameter name="DryAirVolume" optional="true">
+    <uom:Quantity name="volume" />
+    <mtc:Definition>Dry Air Volume</mtc:Definition>
+  </mtc:Parameter>
+  <mtc:Parameter name="WaterVaporMass" optional="true">
+    <uom:Quantity name="mass" />
+    <mtc:Definition>Water Vapor Mass</mtc:Definition>
+  </mtc:Parameter>
+  <mtc:Discipline name="" />
+  <mtc:Definition>Measuring the ratio of the total mass of the water vapor divided by the total volume of air. This is also called volumetric humidity.</mtc:Definition>
+</Taxon>

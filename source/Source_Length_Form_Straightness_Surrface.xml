@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Measure.Length.Form.Straightness.Axis" deprecated="false" replacement="">
+<Taxon xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database" name="Source.Length.Form.Straightness.Surrface" deprecated="false" replacement="">
   <mtc:ExternalReferences>
     <mtc:Reference>
       <mtc:ReferenceUrl>
@@ -11,7 +11,7 @@
   <mtc:Result name="Straightness">
     <uom:Quantity name="length" />
   </mtc:Result>
-  <mtc:Parameter name="LineLength" optional="false">
+  <mtc:Parameter name="Length" optional="false">
     <uom:Quantity name="length" />
     <mtc:Definition />
   </mtc:Parameter>
@@ -32,11 +32,11 @@
     <mtc:Definition>End Point on the Y-Axis distance from the reference</mtc:Definition>
   </mtc:Parameter>
   <mtc:Parameter name="NumberOfPoints" optional="true">
-    <mtc:Definition>Number of Measurement Points</mtc:Definition>
+    <mtc:Definition />
   </mtc:Parameter>
   <mtc:Parameter name="Reference" optional="true">
     <mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>
   </mtc:Parameter>
   <mtc:Discipline name="Dimensional" />
-  <mtc:Definition>The minimum diameter of a cylinder that fully contains a specified line.</mtc:Definition>
+  <mtc:Definition>The minimum normal (perpendicular) distance between two parallel planes that fully contain a surface along a specified line.</mtc:Definition>
 </Taxon>
