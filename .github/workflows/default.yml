@@ -5,7 +5,7 @@ name: CI
 on:
   push:
     branches:    
-      - docs
+      - docs-v2
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
         #build-command: "make latexpdf"
         #docs-folder: "docs/"
     # Create an artifact of the html output.
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v4
       with:
         name: DocumentationHTML
         path: docs/_build/html/
