@@ -17,7 +17,7 @@ jobs:
     # Standard drop-in approach that should work for most people.
     - uses: ammaraskar/sphinx-action@master
       with:
-        pre-build-command: "python -m pip install upgrade pip && pip install sphinxcontrib-bibtex"
+        #pre-build-command: "pip install sphinxcontrib-bibtex"
         docs-folder: "docs/"
         build-command: "sphinx-build -b html . _build"
     # Grabbing custom dependencies and building as a pdf.
