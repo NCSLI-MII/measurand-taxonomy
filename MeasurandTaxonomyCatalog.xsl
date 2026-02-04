@@ -1,7 +1,7 @@
 <xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/UOM_Database"
-xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MetrologyTaxonomyCatalog">
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database"
+    xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MetrologyTaxonomyCatalog">
 
     <xsl:template match="mtc:Taxonomy">
         <html>

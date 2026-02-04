@@ -1,0 +1,84 @@
+name: approvecommit
+on:
+  pull_request_review: 
+    types: [submitted,edited,dismissed]
+    branches: [main,development]
+  #workflow_run:
+    #workflows: [validation]
+    #types: [completed]
+
+
+
+jobs:
+  log_details:
+    runs-on: ubuntu-latest
+    steps:
+          - name: Log PR Title and Reviewer
+            run: |
+              echo "Pull Request Title: ${{ github.event.pull_request.title }}"
+              echo "Reviewer: ${{ github.event.review.user.login }}"
+          - name: Log PR event Context
+            env:
+              GITHUB_CONTEXT: ${{ toJson(github.event) }}
+            run: echo "$GITHUB_CONTEXT"
+          
+  approve:
+    runs-on: ubuntu-latest
+    # Run autocommit if PR is approved 
+    # Use workflow run to enforce validation success as well
+    # github.event.workflow_run.conclusion == 'success'
+    if: |    
+       github.event.review.state == 'approved'
+    permissions:
+      # Give default GITHUB_TOKEN write permission to commit and push
+      # added or changed files during the workflow
+      contents: write
+
+    steps: 
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+      - name: Dump GitHub branch refs
+        run: |
+          echo "head_ref: ${{ github.head_ref }}"
+          echo "ref_name: ${{ github.ref_name }}"
+          echo "pull_request.head.sha: ${{ github.event.pull_request.head.sha }}"
+          echo "pull_request.head.ref: ${{ github.event.pull_request.head.ref }}"
+      - name: Install dependencies
+        run: |
+            python -m pip install --upgrade pip
+            pip install xmlschema
+            pip install lxml
+            pip install yq
+      - name: Merge source files
+        id: merge-source-files
+        run: |
+          sh scripts/combiner.sh ./source
+          python scripts/validator.py -f merge.xml -d ./source
+      
+      - name: Catalog diff merge
+        id: cp-catalog
+        if: steps.merge-source-files.outcome == 'success'
+        run: |
+          cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
+          rm ./source/merge.xml
+          git branch 
+          git status
+      
+      - name: Commit
+        id: auto-commit-action
+        # Commit all changed files back to repository
+        uses: stefanzweifel/git-auto-commit-action@v6
+        if: steps.merge-source-files.outcome == 'success' 
+        with:
+          commit_message: Automated source merge commit to MeasurandTaxonomyCatalog PR ${{ github.event.pull_request.number }} Branch ${{ github.event.pull_request.head.ref }}
+          file_pattern: 'MeasurandTaxonomyCatalog.xml'
+
+      - name: post-commit
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: |
+          echo "Changes detected"
+

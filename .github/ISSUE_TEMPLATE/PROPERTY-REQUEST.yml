@@ -1,0 +1,75 @@
+name: Property Request
+description: Request a new Measurand Property
+title: "[Property]: "
+labels: ["feature", "property"]
+assignees:
+  - ryanmwhitephd
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this property request! Properties refer to parameters taking a list of strings as nominal values. 
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: name
+    attributes:
+      label: Property Name
+      description: Propose a name following the 
+      placeholder: Amplitude
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: Property Definition
+      description: Define the property 
+      placeholder: Amplitude specifies the method used to quantify the amplitude of a periodic or non-periodic signal
+    validations:
+      required: true
+  - type: textarea
+    id: values
+    attributes:
+      label: Nominal Values
+      description: Define the nominal values of the propertu 
+      placeholder: +Peak -Peak RMS Mean PeakToPeak CrestFactor 
+    validations:
+      required: true
+  - type: textarea
+    id: reference_name
+    attributes:
+      label: External Reference Name
+      description: Provide the name of external reference 
+      placeholder: International Electrotechnical Vocabulary - Electromagnetic compatibility 
+    validations:
+      required: true
+  - type: textarea
+    id: reference_value
+    attributes:
+      label: External Reference Value
+      description: Provide a value (id, controlled terminology, etc.) of external reference 
+      placeholder: IEC 60051-161 
+    validations:
+      required: true
+  - type: textarea
+    id: reference_url
+    attributes:
+      label: External Reference URL
+      description: Provide a url 
+      placeholder: https://www.electropedia.org 
+    validations:
+      required: true
+  - type: textarea
+    id: reference_url_title
+    attributes:
+      label: External Reference URL Title
+      description: Provide the title of the reference
+      placeholder: International Electrotechnical Vocabulary
+    validations:
+      required: true
