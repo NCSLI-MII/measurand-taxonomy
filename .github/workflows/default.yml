@@ -14,12 +14,23 @@ jobs:
     #runs-on: sphinxdoc/sphinx-latexpdf
     steps:
     - uses: actions/checkout@v4
-    # Standard drop-in approach that should work for most people.
-    - uses: ammaraskar/sphinx-action@master
+      # Try manual approach rather than sphinx-action
+    - name: Setup python
+      uses: actions/setup-python@v5
       with:
+        python-version: '3.12'
+    - name: Install dependencies
+      run: |
+        pip install sphinx
+        if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
+    - name: Build documentation
+      run: sphinx-build -M html docs docs/_build
+    # Standard drop-in approach that should work for most people.
+    #- uses: ammaraskar/sphinx-action@master
+    #  with:
         #pre-build-command: "pip install sphinxcontrib-bibtex"
-        docs-folder: "docs/"
-        build-command: "sphinx-build -b html . _build"
+        #    docs-folder: "docs/"
+        #build-command: "sphinx-build -b html . _build"
     # Grabbing custom dependencies and building as a pdf.
     #- uses: ammaraskar/sphinx-action@v3
     #  with:
