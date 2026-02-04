@@ -8,7 +8,7 @@ with a measurement uncertainty. Sections :ref:`sec:structure` and
 :cite:t:`CMCDev2` respectively detail the measurand
 construction and the CMC uncertainty. The approved CMC taxonomy,
 comprising uniquely identified CMCs together with templates of their
-measurand specifications, resides at https://somewhere.there.
+measurand specifications, resides at https://github.com/NCSLI-MII/measurand-taxonomy.
 
 .. _sec:structure:
 

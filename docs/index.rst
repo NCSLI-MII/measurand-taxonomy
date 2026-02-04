@@ -14,7 +14,7 @@ Welcome to mii-taxonomy's documentation!
    license
    specification
    taxonomy
-   references
+   references 
 
 Indices and tables
 ==================
