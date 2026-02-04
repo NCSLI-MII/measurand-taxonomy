@@ -24,7 +24,7 @@ jobs:
         pip install sphinx
         if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
     - name: Build documentation
-      run: sphinx-build -n -M html docs docs/_build
+      run: sphinx-build -M html docs docs/_build --nitpicky
     # Standard drop-in approach that should work for most people.
     #- uses: ammaraskar/sphinx-action@master
     #  with:
