@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mtc:Taxon name="Source.MassFlowRate.Gas" deprecated="false" replacement="" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog">
+	<mtc:Result name="MassFlowRate">
+		<mtc:mLayer aspect="as_mass_flow_rate" id="AS134"></mtc:mLayer>
+	</mtc:Result>
+	<mtc:Parameter name="MassFlowRate" optional="false">
+		<mtc:Definition>Mass of a substance passing through a specific cross-sectional area</mtc:Definition>
+		<mtc:mLayer aspect="as_mass_flow_rate" id="AS134"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Temperature" optional="true">
+		<mtc:Definition>Temperature of the gas used during the measurement</mtc:Definition>
+		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS101"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Pressure" optional="true">
+		<mtc:Definition>Pressure of the gas used during the measurement</mtc:Definition>
+		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="RelativeHumidity " optional="true">
+		<mtc:Definition>Relative humidity (water content) of the gas used during measurement, mostly applicable to ambient air as the medium</mtc:Definition>
+		<mtc:mLayer aspect="as_relative_humidity" id="AS110"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Compressibility" optional="true">
+		<mtc:Definition>Relative volume change as a result of a pressure change of the gas used</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReferenceTemperature" optional="true">
+		<mtc:Definition> Reference temperature condition to or from which to correct the flow rate</mtc:Definition>
+		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS101"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReferencePressure" optional="true">
+		<mtc:Definition>Reference pressure condition to or from which to correct the flow rate</mtc:Definition>
+		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReferenceRelativeHumidity" optional="true">
+		<mtc:Definition>Reference Relative Humidity: condition to or from which to correct the flow rate</mtc:Definition>
+		<mtc:mLayer aspect="as_relative_humidity" id="AS110"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReferenceCompressibility" optional="true">
+		<mtc:Definition>Relative volume change as a result of a pressure change for the reference gas</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="AmbientTemperature" optional="true">
+		<mtc:Definition></mtc:Definition>
+		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS101"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="AmbientPressure" optional="true">
+		<mtc:Definition></mtc:Definition>
+		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="AmbientRelativeHumidity" optional="true">
+		<mtc:Definition></mtc:Definition>
+		<mtc:mLayer aspect="as_relative_humidity" id="AS110"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="OutletPressure" optional="true">
+		<mtc:Definition>Outlet pressure ambient or otherwise</mtc:Definition>
+		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReynoldsNumber" optional="true">
+		<mtc:Definition>Dimensionless quantity that characterizes the degree of laminar versus turbulent flow</mtc:Definition>
+	</mtc:Parameter>
+	<mtc:Parameter name="GasVelocity" optional="true">
+		<mtc:Definition>speed of the gas through the measurement area</mtc:Definition>
+		<mtc:mLayer aspect="as_speed" id="AS38"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Diameter" optional="true">
+		<mtc:Definition>Diameter of the pipe used in the measurement</mtc:Definition>
+		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Discipline name=""></mtc:Discipline>
+	<mtc:Definition>This process sources a reference mass flow rate of gas for calibrating gas-flow meters. The instantaneous mass flow rate q_m equals dm/dt, sometimes estimated as ∆m/∆t using the total mass ∆m flowing through a defined surface in time ∆t.</mtc:Definition>
+</mtc:Taxon>
