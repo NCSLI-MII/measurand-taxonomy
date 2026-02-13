@@ -35,6 +35,22 @@
             </mtc:Reference>
         </mtc:ExternalReferences>
     </mtc:Property>
+    <mtc:Property name="GasSpecies" id="propertyIDx9r4">
+        <mtc:Definition>Identifiers for elements, compounds, mixtures for flow calibrations</mtc:Definition> 
+        <mtc:NominalValues>Air He Ar N2 CO2 CH4 C3H8 C4H10 H2S CO H2 Cl2</mtc:NominalValues>
+        <mtc:ExternalReferences>
+            <mtc:Reference>
+                <mtc:CategoryTag> 
+                    <mtc:name>"CAS Registry"</mtc:name>
+                    <mtc:value>"CAS Common Chemistry"</mtc:value>
+                </mtc:CategoryTag>
+                <mtc:ReferenceUrl> 
+                    <mtc:name>"CAS Common Chemistry"</mtc:name> 
+                    <mtc:url>"https://commonchemistry.cas.org/"</mtc:url>
+                </mtc:ReferenceUrl>
+            </mtc:Reference>
+        </mtc:ExternalReferences>
+    </mtc:Property>
 </mtc:Properties>
 <!-- vim:fenc=utf-8
   -->
