@@ -25,7 +25,7 @@
         <mtc:ExternalReferences>
             <mtc:Reference>
                 <mtc:CategoryTag> 
-                    <mtc:name>"International Electrotechnical Vocbaulary - Electromagnetic Compatibility"</mtc:name>
+                    <mtc:name>"International Electrotechnical Vocabulary - Electromagnetic Compatibility"</mtc:name>
                     <mtc:value>"IEC 60050-161"</mtc:value>
                 </mtc:CategoryTag>
                 <mtc:ReferenceUrl> 
