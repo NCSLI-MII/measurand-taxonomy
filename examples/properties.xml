@@ -22,8 +22,7 @@
         <mtc:Definition>Identifiers for elements, compounds, mixtures for flow calibrations</mtc:Definition> 
         <mtc:NominalValues>Air He Ar N2 CO2 CH4 C3H8 C4H10 H2S CO H2 Cl2</mtc:NominalValues>
         <mtc:NominalValuesExtended>
-            <mtc:NominalValue description="Primary component of natural gas">
-                <mtc:PreferredName>CH4</mtc:PreferredName>
+            <mtc:NominalValue value="CH4" description="Primary component of natural gas">
                 <mtc:AlternativeIdentifiers>
                     <mtc:Identifier type="Name">Methane</mtc:Identifier>
                     <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=74-82-8">74-82-8</mtc:Identifier>
@@ -31,8 +30,7 @@
                     <mtc:Identifier type="InChIKey">VNWKTOKETHGBQD-UHFFFAOYSA-N</mtc:Identifier>
                 </mtc:AlternativeIdentifiers>
             </mtc:NominalValue>
-            <mtc:NominalValue description="Primary component of natural gas">
-                <mtc:PreferredName>He</mtc:PreferredName>
+            <mtc:NominalValue value="He" description="Helium">
                 <mtc:AlternativeIdentifiers>
                     <mtc:Identifier type="Name">Helium</mtc:Identifier>
                     <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=7440-59-7">7440-59-7</mtc:Identifier>
