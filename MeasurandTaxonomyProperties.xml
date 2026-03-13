@@ -44,8 +44,8 @@
                 <mtc:AlternativeIdentifiers>
                     <mtc:Identifier type="Name">Helium</mtc:Identifier>
                     <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=7440-59-7">7440-59-7</mtc:Identifier>
-                    <mtc:Identifier type="InChI">InChI=1S/CH4/h1H4</mtc:Identifier>
-                    <mtc:Identifier type="InChIKey">VNWKTOKETHGBQD-UHFFFAOYSA-N</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/He</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">SWQJXJOGLNCZEY-UHFFFAOYSA-N</mtc:Identifier>
                 </mtc:AlternativeIdentifiers>
             </mtc:NominalValue>
 
