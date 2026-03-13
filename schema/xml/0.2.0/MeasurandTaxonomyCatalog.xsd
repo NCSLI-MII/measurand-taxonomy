@@ -36,19 +36,6 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="IdentifierType">
-        <xs:simpleContent>
-            <xs:extension base="xs:string">
-                <!-- Type of identifier, e.g., CAS, InChI, InChIKey, Name -->
-                <xs:attribute name="type" type="xs:string" use="required"/>
-                <!-- Optional URI or registry reference -->
-                <xs:attribute name="source" type="xs:anyURI" use="optional"/>
-                <!-- Optional comment or qualifier -->
-                <xs:attribute name="comment" type="xs:string" use="optional"/>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
-
     <xs:element name="mLayer">
       <xs:complexType>
         <xs:sequence>
@@ -107,38 +94,11 @@
         <xs:list itemType="xs:string"/>
     </xs:simpleType>
 
-    <xs:complexType name="NominalValueType">
-        <xs:sequence>
-            <!-- Optional alternative names or codes -->
-            <xs:element name="AlternativeIdentifiers" minOccurs="0" maxOccurs="1">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="Identifier" type="mtc:IdentifierType" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-        <!-- Attributes for human-readable description or categorization -->
-        <!-- value corresponds to nominalvalue defined in the list representation -->
-        <xs:attribute name="value" type="xs:string" use="required"/>
-        <xs:attribute name="description" type="xs:string" use="optional"/>
-    </xs:complexType>
-
-     
-    <xs:complexType name="NominalValueListType">
-        <xs:sequence>
-            <xs:element name="NominalValue" type="mtc:NominalValueType" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:element name="NominalValuesExtended" type="mtc:NominalValueListType"/>
-
     <xs:element name="Property">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="Definition" type="xs:string" minOccurs="0"/>
                 <xs:element ref="mtc:NominalValues" maxOccurs="1" minOccurs="0"/>
-                <xs:element ref="mtc:NominalValuesExtended" maxOccurs="1" minOccurs="0"/>
                 <xs:element ref="mtc:ExternalReferences" maxOccurs="1" minOccurs="0"/>
             </xs:sequence>
             <xs:attribute name="name" type="xs:Name"/>

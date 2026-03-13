@@ -17,6 +17,60 @@
             </mtc:Reference>
         </mtc:ExternalReferences>
     </mtc:Property>
+    
+    <mtc:Property name="GasSpeciesSimple" id="propertyIDx9r5">
+        <mtc:Definition>Identifiers for elements, compounds, mixtures for flow calibrations</mtc:Definition> 
+        <mtc:NominalValues>Air He Ar N2 CO2 CH4 C3H8 C4H10 H2S CO H2 Cl2</mtc:NominalValues>
+        
+        <mtc:ExternalReferences>
+            <mtc:Reference>
+                <mtc:CategoryTag> 
+                    <mtc:name>"CAS Registry"</mtc:name>
+                    <mtc:value>"CAS Common Chemistry"</mtc:value>
+                </mtc:CategoryTag>
+                <mtc:ReferenceUrl> 
+                    <mtc:name>"CAS Common Chemistry"</mtc:name> 
+                    <mtc:url>"https://commonchemistry.cas.org/"</mtc:url>
+                </mtc:ReferenceUrl>
+            </mtc:Reference>
+        </mtc:ExternalReferences>
+    </mtc:Property>
+
+    <mtc:Property name="GasSpecies" id="propertyIDx9r4">
+        <mtc:Definition>Identifiers for elements, compounds, mixtures for flow calibrations</mtc:Definition> 
+        <mtc:NominalValues>Air He Ar N2 CO2 CH4 C3H8 C4H10 H2S CO H2 Cl2</mtc:NominalValues>
+        <mtc:NominalValuesExtended>
+            <mtc:NominalValue value="CH4" description="Primary component of natural gas">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Methane</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=74-82-8">74-82-8</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/CH4/h1H4</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">VNWKTOKETHGBQD-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+            <mtc:NominalValue value="He" description="Helium">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Helium</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=7440-59-7">7440-59-7</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/CH4/h1H4</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">VNWKTOKETHGBQD-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+        </mtc:NominalValuesExtended>
+        
+        <mtc:ExternalReferences>
+            <mtc:Reference>
+                <mtc:CategoryTag> 
+                    <mtc:name>"CAS Registry"</mtc:name>
+                    <mtc:value>"CAS Common Chemistry"</mtc:value>
+                </mtc:CategoryTag>
+                <mtc:ReferenceUrl> 
+                    <mtc:name>"CAS Common Chemistry"</mtc:name> 
+                    <mtc:url>"https://commonchemistry.cas.org/"</mtc:url>
+                </mtc:ReferenceUrl>
+            </mtc:Reference>
+        </mtc:ExternalReferences>
+    </mtc:Property>
 </mtc:Properties>
 <!-- vim:fenc=utf-8
   -->
