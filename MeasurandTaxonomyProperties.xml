@@ -25,12 +25,140 @@
         <mtc:ExternalReferences>
             <mtc:Reference>
                 <mtc:CategoryTag> 
-                    <mtc:name>"International Electrotechnical Vocbaulary - Electromagnetic Compatibility"</mtc:name>
+                    <mtc:name>"International Electrotechnical Vocabulary - Electromagnetic Compatibility"</mtc:name>
                     <mtc:value>"IEC 60050-161"</mtc:value>
                 </mtc:CategoryTag>
                 <mtc:ReferenceUrl> 
                     <mtc:name>"International Electrotechnical Vocabulary"</mtc:name> 
                     <mtc:url>"https://www.electropedia.org"</mtc:url>
+                </mtc:ReferenceUrl>
+            </mtc:Reference>
+        </mtc:ExternalReferences>
+    </mtc:Property>
+    <mtc:Property name="GasSpecies" id="propertyIDx9r4">
+        <mtc:Definition>Identifiers for elements, compounds, mixtures for flow calibrations</mtc:Definition> 
+        <mtc:NominalValues>Air He Ar N2 CO2 CH4 C3H8 C4H10 H2S CO H2 Cl2</mtc:NominalValues>
+        <mtc:NominalValuesExtended>
+            <!-- Helium -->
+            <mtc:NominalValue value="He" description="Helium">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Helium</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=7440-59-7">7440-59-7</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/He</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">SWQJXJOGLNCZEY-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+
+            <!-- Argon -->
+            <mtc:NominalValue value="Ar" description="Noble gas used in lighting and inert atmospheres">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Argon</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=7440-37-1">7440-37-1</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/Ar</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">XKRFYHLGVUSROY-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+            
+            <!-- Methane -->
+            <mtc:NominalValue value="CH4" description="Primary component of natural gas">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Methane</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=74-82-8">74-82-8</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/CH4/h1H4</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">VNWKTOKETHGBQD-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+
+
+            <!-- Nitrogen -->
+            <mtc:NominalValue value="N2" description="Diatomic nitrogen, major component of Earth's atmosphere">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Nitrogen</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=7727-37-9">7727-37-9</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/N2/c1-2</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">IJGRMHOSHXDMSA-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+
+            <!-- Carbon Dioxide -->
+            <mtc:NominalValue value="CO2" description="Colorless gas produced by respiration and combustion">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Carbon dioxide</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=124-38-9">124-38-9</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/CO2/c2-1-3</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">CURLTUGMZLYLDI-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+
+            <!-- Propane -->
+            <mtc:NominalValue value="C3H8" description="Common fuel gas used for heating and cooking">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Propane</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=74-98-6">74-98-6</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/C3H8/c1-3-2/h3H2,1-2H3</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">ATUOYWHBWRKTHZ-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+
+            <!-- Butane -->
+            <mtc:NominalValue value="C4H10" description="Flammable gas used as a fuel and propellant">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Butane</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=106-97-8">106-97-8</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/C4H10/c1-3-4-2/h3-4H2,1-2H3</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">IJDNQMDRQITEOD-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+
+            <!-- Hydrogen Sulfide -->
+            <mtc:NominalValue value="H2S" description="Toxic gas with a characteristic odor of rotten eggs">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Hydrogen sulfide</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=7783-06-4">7783-06-4</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/H2S/h1H2</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">RWSOTUBLDIXVET-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+
+            <!-- Carbon Monoxide -->
+            <mtc:NominalValue value="CO" description="Colorless, odorless toxic gas produced by incomplete combustion">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Carbon monoxide</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=630-08-0">630-08-0</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/CO/c1-2</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">UGFAIRIUMAVXCW-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+
+            <!-- Hydrogen -->
+            <mtc:NominalValue value="H2" description="Lightest gas, used as fuel and industrial feedstock">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Hydrogen</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=1333-74-0">1333-74-0</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/H2/h1H</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">UFHFLCQGNIYNRP-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+
+            <!-- Chlorine -->
+            <mtc:NominalValue value="Cl2" description="Greenish-yellow gas used as a disinfectant and chemical reagent">
+                <mtc:AlternativeIdentifiers>
+                    <mtc:Identifier type="Name">Chlorine</mtc:Identifier>
+                    <mtc:Identifier type="CAS" source="https://commonchemistry.cas.org/detail?cas_rn=7782-50-5">7782-50-5</mtc:Identifier>
+                    <mtc:Identifier type="InChI">InChI=1S/Cl2/c1-2</mtc:Identifier>
+                    <mtc:Identifier type="InChIKey">KZBUYRJDOAKODT-UHFFFAOYSA-N</mtc:Identifier>
+                </mtc:AlternativeIdentifiers>
+            </mtc:NominalValue>
+        </mtc:NominalValuesExtended>
+        <mtc:ExternalReferences>
+            <mtc:Reference>
+                <mtc:CategoryTag> 
+                    <mtc:name>"CAS Registry"</mtc:name>
+                    <mtc:value>"CAS Common Chemistry"</mtc:value>
+                </mtc:CategoryTag>
+                <mtc:ReferenceUrl> 
+                    <mtc:name>"CAS Common Chemistry"</mtc:name> 
+                    <mtc:url>"https://commonchemistry.cas.org/"</mtc:url>
                 </mtc:ReferenceUrl>
             </mtc:Reference>
         </mtc:ExternalReferences>
