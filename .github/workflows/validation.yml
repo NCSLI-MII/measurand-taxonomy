@@ -1,0 +1,173 @@
+name: validation
+on:
+  pull_request: 
+    branches: [main,development]
+  workflow_dispatch:
+
+jobs:
+  pre-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+            python -m pip install --upgrade pip
+            pip install xmlschema
+            pip install lxml
+      - name: Schema validation
+        id: schema-validate
+        shell: python
+        run: |
+            import xmlschema
+            schema = xmlschema.XMLSchema('MeasurandTaxonomyCatalog.xsd')
+      - name: XML validation
+        id: xml-validation
+        run: |
+            python scripts/validator.py -f MeasurandTaxonomyCatalog.xml -d ./
+      - name: XML validation
+        id: xml-validation-properties
+        run: |
+            python scripts/validator.py -f MeasurandTaxonomyProperties.xml -d ./
+
+  
+  changed-files:
+    needs: pre-merge
+    runs-on: ubuntu-latest
+
+    name: Test changed-files
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+            python -m pip install --upgrade pip
+            pip install xmlschema
+            pip install lxml
+            pip install yq
+      - name: Get changed catalog
+        id: changed-catalog-file
+        uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
+        with:
+          files: |
+            MeasurandTaxonomyCatalog.xml
+      
+      - name: Validate catalog if changed
+        id: validate-catalog
+        if: steps.changed-catalog-file.outputs.any_changed == 'true'
+        env:
+          ALL_CHANGED_FILES: ${{ steps.change-catalog-file.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "$file was changed"
+          done
+          python scripts/validator.py -f MeasurandTaxonomyCatalog.xml -d ./
+
+      - name: Get all changed source xml
+        id: changed-source-files
+        uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46
+        with:
+          files: |
+            source/**.xml
+      
+      - name: Check if source and catalog changed
+        id: changed-source-catalog
+        if: |
+          steps.changed-source-files.outputs.any_changed == 'true' && 
+          (steps.changed-catalog-file.outputs.any_changed == 'true' || steps.changed-source-files.outputs.any_deleted == 'true' || steps.changed-source-files.outputs.any_added == 'true')
+        run: exit 1
+
+      - name: Check if source files removed
+        id: removed-source-files
+        if: steps.changed-source-files.outputs.any_deleted == 'true'
+        env:
+          REMOVED_FILES: ${{ steps.changed-source-files.outputs.deleted_files }}
+        run: |
+          for file in ${REMOVED_FILES}; do
+            echo "$file was removed"
+          done
+
+      - name: Validate new source if changed
+        id: valid-new-source-files
+        if: steps.changed-source-files.outputs.any_added == 'true'
+        env:
+          ADDED_FILES: ${{ steps.changed-source-files.outputs.added_files }}
+        run: |
+          for file in ${ADDED_FILES}; do
+            echo "$file was added"
+            echo "$file" >> changed_files.txt
+          done
+          python scripts/validator.py -l changed_files.txt -d ./
+      
+      - name: Validate source if changed
+        id: valid-changed-source-files
+        if: steps.changed-source-files.outputs.any_changed == 'true'
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-source-files.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "$file was changed"
+            echo "$file" >> changed_files.txt
+          done
+          python scripts/validator.py -l changed_files.txt -d ./
+      
+      - name: Merge source files
+        id: merge-source-files
+        if: |
+          (steps.changed-source-files.outputs.any_changed == 'true' && steps.valid-changed-source-files.outcome == 'success') ||
+          (steps.changed-source-files.outputs.any_added == 'true' && steps.valid-new-source-files.outcome == 'success') ||
+          steps.changed-source-files.outputs.any_deleted == 'true'
+        run: |
+          sh scripts/combiner.sh ./source
+          python scripts/validator.py -f merge.xml -d ./source
+
+      - name: Upload merged catalog
+        uses: actions/upload-artifact@v4
+        if: steps.merge-source-files.outcome == 'success'
+        with:
+          name: post_merge
+          path: ./source/merge.xml
+
+      - name: Upload original catalog
+        uses: actions/upload-artifact@v4
+        if:  steps.merge-source-files.outcome == 'success' && steps.changed-catalog-file.outputs.any_changed == 'false'
+        with:
+          name: pre_merge
+          path: MeasurandTaxonomyCatalog.xml
+
+      - name: Catalog diff merge
+        id: diff-merged-catalog
+        if: steps.merge-source-files.outcome == 'success'
+        run: |
+          cp ./source/merge.xml ./MeasurandTaxonomyCatalog.xml
+          git status
+          git diff --word-diff --color=always origin/main MeasurandTaxonomyCatalog.xml | grep -P '\+|\-' --color=never | tee diff_merge.txt
+          git diff --word-diff origin/main MeasurandTaxonomyCatalog.xml | grep -P '\+|\-' --color=never | tee > diff_merge.txt
+
+      - name: Upload catalog diff
+        uses: actions/upload-artifact@v4
+        if:  steps.merge-source-files.outcome == 'success' && steps.changed-catalog-file.outputs.any_changed == 'false'
+        with:
+          name: diff_merge
+          path: diff_merge.txt 
+     
+      - name: Cleanup 
+        if: steps.merge-source-files.outcome == 'success'
+        run: |
+          rm ./source/merge.xml
+          rm diff_merge.txt
+          git status
+  
+ 
+
+          
+              

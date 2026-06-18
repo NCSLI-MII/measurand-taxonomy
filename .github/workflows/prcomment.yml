@@ -1,0 +1,27 @@
+name: prcomment
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number: 
+        description: 'PR number to comment'
+        required: true
+        type: string
+      pr_comment:
+        description: 'PR comment body'
+        required: true
+        type: string
+
+jobs:
+  prcomment:
+    runs-on: ubuntu-latest
+    permissions: 
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Comment PR
+        run: |
+          gh pr review ${{ inputs.pr_number }} --comment -b ${{ inputs.pr_comment }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
