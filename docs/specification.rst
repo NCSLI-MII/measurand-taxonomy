@@ -53,16 +53,16 @@ The individual MII taxa adhere to the following structure and naming rules:
    Note that this convention prohibits spaces and punctuation, including hyphens, in the name.
    Word order within a token (general to specific or vice versa) may vary according to customary usage in the measurement domain: ``LeastSquaresFit`` sounds more natural to practicioners than ``FitLeastSquares``.
 
-.. _proocess token rule:
+.. _process token rule:
 
 5. A taxon’s first token represents the process type, taking either the value ``Measure`` or ``Source`` to identify an input or output measurement process, respectively.\ [4]_
 
    * A ``Measure`` process takes a physical input and produces an indicated quantity value or nominal property value, whether visual, digital or both.
-     ``Measure`` examples include using a meter to indicate the ambient relative humidity, determining a gage block's length, measuring an attenuator's transmission factor, capturing strain with a sensor.
+     ``Measure`` examples include using a meter to indicate the ambient relative humidity, determining a gauge block's length, measuring an attenuator's transmission factor, capturing strain with a sensor.
      ``Measure`` processes include those that use an uncalibrated input device (comparator) and a calibrated source, such as using a resistance bridge to calibrate a resistor against a reference resistor.\ [4]_
 
    * A ``Source`` process takes a desired quantity value or nominal property value and produces a physical output.
-     ``Source`` examples include using a multi-function calibrator to output a nominal voltage to a meter's input terminals, placing a particular mass standard (artifact) on a scale, supplying a pressure to a pressure gage, exposing a radiometer to black-body radiation.
+     ``Source`` examples include using a multi-function calibrator to output a nominal voltage to a meter's input terminals, placing a particular mass standard (artifact) on a scale, supplying a pressure to a pressure gauge, exposing a radiometer to black-body radiation.
      ``Source`` processes include those that use an uncalibrated physical source monitored by a calibrated input device such as calibrating a hygrometer with a calibrated chilled-mirror device and a common moist-air source.\ [4]_
 
 .. _quantity next rule:
@@ -84,8 +84,8 @@ The individual MII taxa adhere to the following structure and naming rules:
 .. _no token rule:
 
 10. Add tokens only when required to distinguish measurands with different parameter sets.
-   For simulated temperature sources, for example, (``Source.Temperature.Simulated``) we add ``.Thermocouple`` or ``.PRT`` to distinguish thermocouple parameters (e.g., temperature, voltage, type) from PRT parameters (e.g, temperature, resistance, type).
-   Rather than adding tokens to create several taxa for different thermocouple types, a nominal-property parameter (e.g., 'ThermocoupleType' = 'T') covers all cases.
+    For simulated temperature sources, for example, (``Source.Temperature.Simulated``) we add ``.Thermocouple`` or ``.PRT`` to distinguish thermocouple parameters (e.g., temperature, voltage, type) from PRT parameters (e.g, temperature, resistance, type).
+    Rather than adding tokens to create several taxa for different thermocouple types, a nominal-property parameter (e.g., 'ThermocoupleType' = 'T') covers all cases.
 
 .. _special token rule:
 
@@ -93,19 +93,19 @@ The individual MII taxa adhere to the following structure and naming rules:
 
 .. _ratio token rule:
 
-   * The ``Ratio`` token precedes a quantity-kind token to identify a quotient of two like-kind quantities.
+   * The `ratio token`_ (``Ratio``) precedes a quantity-kind token to identify a quotient of two like-kind quantities.
 
 .. _coefficient token rule:
 
-   * The ``Coefficient`` token precedes two successive and differing quantity-kind tokens to identify a quotient of two unlike quantity kinds.
+   * The `coefficient token`_ (``Coefficient``) precedes two successive and differing quantity-kind tokens to identify a quotient of two unlike quantity kinds.
 
 .. _delta token rule:
 
-   * The ``Delta`` token follows the quantity(ies) to identify a further quantity that differs when measuring the quotient’s numerator and denominator.
+   * The `delta token`_ (``Delta``) follows the quantity(ies) to identify a further quantity that differs when measuring the quotient’s numerator and denominator.
 
 .. _model token rule:
 
-   * The ``Model`` token after a quantity introduces a standard instrument model.
+   * The `model token`_ (``Model``) after a quantity introduces a standard instrument model.
 
 The `Taxon examples`_ table :cite:p:`MJK:MII4IoT` lists some taxa and their KCDB equivalents that illustrate the MII measurand structure and typical qualifier detail.
 Note that the taxon *as a whole* serves as a metadata tag to identify MII measurands.
@@ -130,6 +130,7 @@ Other than distinguishing ``Measure`` or ``Source`` processes, a taxon’s synta
       | ``Source.Mass.Conventional``\ :math:`^{\mathrm{b}}`  | none                          |
       |                                                      |                               |
       +------------------------------------------------------+-------------------------------+
+
     :math:`^{\mathrm{a}}`\ Mass, as against other densities, e.g., flux; solid v. gas or liquid
 
     :math:`^{\mathrm{b}}`\ As against (true) mass
@@ -145,12 +146,16 @@ A ratio takes the name “factor” when used as a dimensionless proportionality
 In practice, some common measurand names ignore this convention, e.g., “reflection coefficient”, “index of refraction”, both of which we compute as ratios and use as factors.
 Both ratios and coefficients play into measurands.
 
+.. _ratio token:
+
 Ratios
 ''''''
 
 We structure ratio taxa as ``…Ratio.Q``\ [5]_, where ``Q`` names both ratioed quantities.
 ``Q``\ ’s structure follows the taxon rules: first a token for the quantity kind representing an M-Layer aspect, then successively more specific descriptors.
 So, ``Measure.Ratio.Pressure…`` would identify a ratio of two particular pressures (identified in parameters tied to their M-Layer aspect) and ``Source.Ratio.Power.RF…`` would represent a ratio of two microwave powers (likewise identified).
+
+.. _coefficient token:
 
 Coefficients
 ''''''''''''
@@ -171,6 +176,8 @@ To clarify any confusion, we liken a transducer to any other artifact that embod
 Therefore, the transducer instrument specification would tag the functionality with ``Source`` and a laboratory that calibrates transducers would tag the corresponding CMC with ``Measure``.
 We treat any instrument to which a coefficient applies, e.g., a transconductance amplifier, in the same way.
 
+.. _delta token:
+
 Delta
 '''''
 
@@ -179,6 +186,8 @@ For example, we might measure a frequency response by first measuring an signal 
 The ratio quantity (:math:`V/V_\mathrm{ref}`) represents the frequency response between the two frequencies.
 After the main quantity, the tokens ``…Delta.QInf`` flag an influence quantity ``QInf`` (with a corresponding M-Layer aspect entry) that changes during the measurement.
 So using AC amplitudes in this example, we would name their ratio ``Ratio.Voltage.AC.Delta.Frequency``.
+
+.. _model token:
 
 Instrument Models (tentative)
 '''''''''''''''''''''''''''''
@@ -309,11 +318,13 @@ Instrument operating conditions or laboratory CMCs may depend on the same temper
 Further Parameter Detail
 
 Parameter names follow the same formatting convention as tokens according to the `camel rule`_.
-Like the measurand itself, each parameter includes a human-readable definition, preferably as a link to an external authoritative source.
 A given measurand shall not have any duplicate parameter names.
 Duplicate names would introduce ambiguity, preventing machines from matching the parameter sets of different instantiated measurands.
 The names therefore distinguish parameters of the same quantity or property, e.g., ``InputVoltage`` and ``OutputVoltage``.
 Parameter names may vary between measurands, e.g., ``Vin`` and ``Vout``.
+Like the measurand itself, each parameter includes a human-readable definition, preferably as a link to an external authoritative source.
+Parameter meanings may vary between measurands, so defining the parameter within the context of the given measurand helps ensure clarity.
+Parameters with different names may reference the same quantity or aspect, further clarifying the name.
 
 Deprecation
 ^^^^^^^^^^^
