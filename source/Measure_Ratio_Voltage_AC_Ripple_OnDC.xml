@@ -6,7 +6,7 @@
 	<mtc:Parameter name="DCVoltage" optional="false">
 		<mtc:Definition>DC Voltage</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Impedance" optional="true">
 		<mtc:Definition>Input impedance of the measuring device. Expected output impedance of a source.</mtc:Definition>
@@ -15,7 +15,7 @@
 	<mtc:Parameter name="Bandwidth" optional="true">
 		<mtc:Definition>High Pass Filter Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
 	<mtc:Definition>A test process that measures the ratio between the AC ripple &amp; noise in RMS voltage measured on a DC signal then divided by the DC voltage level creating a ratio between the two voltages.</mtc:Definition>

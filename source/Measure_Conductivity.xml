@@ -2,32 +2,32 @@
 <mtc:Taxon name="Measure.Conductivity" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Conductivity">
 		<uom:Quantity name="conductivity"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_conductivity" id="AS91"></mtc:mLayer>
+		<mtc:mLayer aspect="conductivity" id="AS91"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Conductivity" optional="false">
 		<mtc:Definition>Conductivity to be measured</mtc:Definition>
 		<uom:Quantity name="conductivity"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_conductivity" id="AS91"></mtc:mLayer>
+		<mtc:mLayer aspect="conductivity" id="AS91"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Distance" optional="true">
 		<mtc:Definition>Length between nodes</mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Voltage" optional="true">
 		<mtc:Definition>Voltage between the probes</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Current" optional="true">
 		<mtc:Definition>Electrical Current Expected</mtc:Definition>
 		<uom:Quantity name="current"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-current" id="AS5"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Temperature" optional="true">
 		<mtc:Definition>usually 20 °C</mtc:Definition>
 		<uom:Quantity name="temperature"></uom:Quantity>
-		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS101"></mtc:mLayer>
+		<mtc:mLayer aspect="thermodynamic-temperature" id="AS101"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Chemical"></mtc:Discipline>
 	<mtc:Definition>The process of measuring the Electrical Conductivity of a Solution or a device.</mtc:Definition>

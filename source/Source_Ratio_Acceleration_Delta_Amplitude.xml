@@ -12,17 +12,17 @@
 	<mtc:Parameter name="Frequency" optional="false">
 		<mtc:Definition>Test Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Acceleration" optional="false">
 		<mtc:Definition>Test Acceleration</mtc:Definition>
 		<uom:Quantity name="acceleration"></uom:Quantity>
-		<mtc:mLayer aspect="as_acceleration" id="AS39"></mtc:mLayer>
+		<mtc:mLayer aspect="acceleration" id="AS39"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="AccelerationRef" optional="false">
 		<mtc:Definition>Reference Acceleration</mtc:Definition>
 		<uom:Quantity name="acceleration"></uom:Quantity>
-		<mtc:mLayer aspect="as_acceleration" id="AS39"></mtc:mLayer>
+		<mtc:mLayer aspect="acceleration" id="AS39"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Axis" optional="true">
 		<mtc:Definition>{X,Y,Z}</mtc:Definition>
@@ -30,12 +30,12 @@
 	<mtc:Parameter name="Displacement" optional="true">
 		<mtc:Definition>Test Displacement</mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="ExcitationVoltage" optional="true">
 		<mtc:Definition>Excitation Voltage</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Position" optional="true">
 		<mtc:Definition>Position Relative to Gravity</mtc:Definition>
