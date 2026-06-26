@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mtc:Taxon name="Measure.Charge.DC" deprecated="false" replacement="" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog">
+<mtc:Taxon name="Measure.Charge.DC" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:ExternalReferences>
 		<mtc:Reference>
 			<mtc:CategoryTag>
@@ -14,15 +14,15 @@
 	</mtc:ExternalReferences>
 	<mtc:Result name="Charge">
 		<uom:Quantity name="charge"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_charge" id="AS21"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-charge" id="AS21"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Charge" optional="false">
 		<mtc:Definition>the measured charge</mtc:Definition>
-		<mtc:mLayer aspect="as_electric_charge" id="AS21"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-charge" id="AS21"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="VoltageDC" optional="true">
 		<mtc:Definition>peak DC voltage presented to the measurement standard's 50 ohm input</mtc:Definition>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name=""></mtc:Discipline>
 	<mtc:Definition>This process measures electric charge sourced in direct-current mode.</mtc:Definition>

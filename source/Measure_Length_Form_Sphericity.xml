@@ -2,17 +2,17 @@
 <mtc:Taxon name="Measure.Length.Form.Sphericity" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Sphericity">
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Sphericity" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Height" optional="true">
 		<mtc:Definition>above turntable</mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="NumberOfPoints" optional="true">
 		<mtc:Definition>Number of Measurment Points</mtc:Definition>
@@ -20,12 +20,12 @@
 	<mtc:Parameter name="StartAngle" optional="true">
 		<mtc:Definition>Rotational Angle from reference</mtc:Definition>
 		<uom:Quantity name="plane-angle"></uom:Quantity>
-		<mtc:mLayer aspect="as_plane_angle" id="AS10"></mtc:mLayer>
+		<mtc:mLayer aspect="plane-angle" id="AS10"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="StopAngle" optional="true">
 		<mtc:Definition>Rotational Angle from reference</mtc:Definition>
 		<uom:Quantity name="plane-angle"></uom:Quantity>
-		<mtc:mLayer aspect="as_plane_angle" id="AS10"></mtc:mLayer>
+		<mtc:mLayer aspect="plane-angle" id="AS10"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Reference" optional="true">
 		<mtc:Definition>DIN, ISO, ASTM, ASME, or Federal G-Series Measurement Specifications  [plain text]</mtc:Definition>

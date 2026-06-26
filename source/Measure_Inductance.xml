@@ -2,22 +2,22 @@
 <mtc:Taxon name="Measure.Inductance" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Inductance">
 		<uom:Quantity name="inductance"></uom:Quantity>
-		<mtc:mLayer aspect="as_inductance" id="AS28"></mtc:mLayer>
+		<mtc:mLayer aspect="inductance" id="AS28"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Inductance" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="inductance"></uom:Quantity>
-		<mtc:mLayer aspect="as_inductance" id="AS28"></mtc:mLayer>
+		<mtc:mLayer aspect="inductance" id="AS28"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Frequency" optional="true">
 		<mtc:Definition>Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="AppliedVoltage" optional="true">
 		<mtc:Definition>Voltage</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
 	<mtc:Definition>The process of measuring the Inductance of a device.</mtc:Definition>

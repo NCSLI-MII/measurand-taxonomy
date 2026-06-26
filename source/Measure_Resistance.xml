@@ -2,12 +2,12 @@
 <mtc:Taxon name="Measure.Resistance" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Resistance">
 		<uom:Quantity name="resistance"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_resistance" id="AS24"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-resistance" id="AS24"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Resistance" optional="false">
 		<mtc:Definition>Resistance Measured</mtc:Definition>
 		<uom:Quantity name="resistance"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_resistance" id="AS24"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-resistance" id="AS24"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Wire" optional="false">
 		<mtc:Definition>{2, 3, 4, 2Wire, 3Wire,4Wire}</mtc:Definition>
@@ -15,12 +15,12 @@
 	<mtc:Parameter name="Voltage" optional="true">
 		<mtc:Definition>Recomended Voltage</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Current" optional="true">
 		<mtc:Definition>Recomended Current</mtc:Definition>
 		<uom:Quantity name="current"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-current" id="AS5"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
 	<mtc:Definition>The process of measuring the resistance of a resister or other device.</mtc:Definition>

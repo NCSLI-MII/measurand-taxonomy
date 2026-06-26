@@ -6,12 +6,12 @@
 	<mtc:Parameter name="Frequency" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Power" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="power"></uom:Quantity>
-		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
+		<mtc:mLayer aspect="power" id="AS19"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Port" optional="true">
 		<mtc:Definition>Measurement Port</mtc:Definition>
@@ -19,7 +19,7 @@
 	<mtc:Parameter name="Bandwidth" optional="true">
 		<mtc:Definition>Measurement Bandwidth</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
 	<mtc:Definition>The process of measuring the Transmission Coefficient magnitude of an RF signal that transmitted through the device under test.  It is represented as a ratio of power received over the transmitted power.</mtc:Definition>

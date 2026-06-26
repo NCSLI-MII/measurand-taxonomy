@@ -2,7 +2,7 @@
 <mtc:Taxon name="Measure.Length.Circumference" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Length">
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Type" optional="true">
 		<mtc:Definition>{Inside, Outside}</mtc:Definition>
@@ -16,7 +16,7 @@
 	<mtc:Parameter name="Length" optional="false">
 		<mtc:Definition>Measured Circumference</mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Dimensional"></mtc:Discipline>
 	<mtc:Definition>Length Circumference is the length measured around the inside or outside of a round or circular object.</mtc:Definition>

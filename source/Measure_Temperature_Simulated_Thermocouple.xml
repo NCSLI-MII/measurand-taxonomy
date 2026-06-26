@@ -2,12 +2,12 @@
 <mtc:Taxon name="Measure.Temperature.Simulated.Thermocouple" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Temperature">
 		<uom:Quantity name="temperature"></uom:Quantity>
-		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS101"></mtc:mLayer>
+		<mtc:mLayer aspect="thermodynamic-temperature" id="AS101"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Temperature" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="temperature"></uom:Quantity>
-		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS101"></mtc:mLayer>
+		<mtc:mLayer aspect="thermodynamic-temperature" id="AS101"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="ThermocoupleType" optional="false">
 		<mtc:Definition>{B, C, D, E, G, J, K, M, N, P, R, S, T}</mtc:Definition>
@@ -15,7 +15,7 @@
 	<mtc:Parameter name="Voltage" optional="true">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Thermodynamics"></mtc:Discipline>
 	<mtc:Definition>The process of measuring the simulated temperature in voltage from a thermocouple device.</mtc:Definition>

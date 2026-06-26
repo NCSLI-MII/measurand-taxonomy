@@ -2,42 +2,42 @@
 <mtc:Taxon name="Source.Length" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Length">
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Length" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="StartPointX" optional="true">
 		<mtc:Definition>Start Point on the X-Axis distance from the reference</mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="StartPointY" optional="true">
 		<mtc:Definition>Start Point on the Y-Axis distance from the reference</mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="StartPointZ" optional="true">
 		<mtc:Definition>Start Point on the Z-Axis distance from the reference</mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="EndPointX" optional="true">
 		<mtc:Definition>End Point on the X-Axis distance from the reference</mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="EndPointY" optional="true">
 		<mtc:Definition>End Point on the Y-Axis distance from the reference</mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="EndPointZ" optional="true">
 		<mtc:Definition>End Point on the Z-Axis distance from the reference</mtc:Definition>
 		<uom:Quantity name="length"></uom:Quantity>
-		<mtc:mLayer aspect="as_length" id="AS3"></mtc:mLayer>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Reference" optional="true">
 		<mtc:Definition>ISO- or ASME-compliant datum drawing specification (or equivalent unambiguous specification) [plain text]</mtc:Definition>

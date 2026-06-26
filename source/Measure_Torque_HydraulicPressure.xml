@@ -10,7 +10,7 @@
 	<mtc:Parameter name="Pressure" optional="false">
 		<mtc:Definition>The applied hydraulic pressure</mtc:Definition>
 		<uom:Quantity name="pressure"></uom:Quantity>
-		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Direction" optional="true">
 		<mtc:Definition>{CW, CCW}</mtc:Definition>
