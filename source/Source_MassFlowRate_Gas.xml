@@ -46,7 +46,7 @@
 	</mtc:Parameter>
 	<mtc:Parameter name="ReferenceCompressibility" optional="true">
 		<mtc:Definition>Relative volume change as a result of a pressure change for the reference gas</mtc:Definition>
-		<mtc:mLayer aspect="null" id="AS1></mtc:mLayer>
+		<mtc:mLayer aspect="null" id="AS1"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="AmbientTemperature" optional="true">
             <mtc:Definition></mtc:Definition>
@@ -70,7 +70,7 @@
 	</mtc:Parameter>
 	<mtc:Parameter name="ReynoldsNumber" optional="true">
 		<mtc:Definition>Dimensionless quantity that characterizes the degree of laminar versus turbulent flow</mtc:Definition>
-		<mtc:mLayer aspect="null" id="AS1></mtc:mLayer>
+		<mtc:mLayer aspect="null" id="AS1"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="GasVelocity" optional="true">
             <mtc:Definition>speed of the gas through the measurement area</mtc:Definition>
