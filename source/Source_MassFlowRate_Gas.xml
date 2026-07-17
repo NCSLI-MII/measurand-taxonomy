@@ -26,7 +26,8 @@
 	</mtc:Parameter>
 	<mtc:Parameter name="Compressibility" optional="true">
             <mtc:Definition>Relative volume change as a result of a pressure change of the gas used</mtc:Definition>
-		    <mtc:mLayer aspect="null" id="AS1></mtc:mLayer>
+		    <uom:Quantity name=""></uom:Quantity>
+		    <mtc:mLayer aspect="null" id="AS1"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="ReferenceTemperature" optional="true">
             <mtc:Definition> Reference temperature condition to or from which to correct the flow rate</mtc:Definition>
