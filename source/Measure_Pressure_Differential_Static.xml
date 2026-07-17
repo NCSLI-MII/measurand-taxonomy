@@ -2,17 +2,17 @@
 <mtc:Taxon name="Measure.Pressure.Differential.Static" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Pressure">
 		<uom:Quantity name="pressure"></uom:Quantity>
-		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Pressure" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="pressure"></uom:Quantity>
-		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="PresureRef" optional="true">
 		<mtc:Definition>Reference Pressure</mtc:Definition>
 		<uom:Quantity name="pressure"></uom:Quantity>
-		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="O2.Safe" optional="true">
 		<mtc:Definition>{"Yes","No"}</mtc:Definition>

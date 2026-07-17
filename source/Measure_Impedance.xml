@@ -10,12 +10,12 @@
 	<mtc:Parameter name="Frequency" optional="true">
 		<mtc:Definition>Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Voltage" optional="true">
 		<mtc:Definition>Voltage</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
 	<mtc:Definition>The process of measuring the impedance of a device.</mtc:Definition>

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mtc:Taxon name="Measure.Ratio.Humidity.Relative" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="RelativeHumidity">
-            <uom:Quantity name="ratio"></uom:Quantity>
-            <mtc:mLayer aspect="as_relative_humidity" id="AS110"></mtc:mLayer>
+		<uom:Quantity name="ratio"></uom:Quantity>
+		<mtc:mLayer aspect="relative-humidity" id="AS110"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="RelativeHumidity" optional="false">
 		<mtc:Definition></mtc:Definition>
-                <uom:Quantity name="ratio"></uom:Quantity>
-                <mtc:mLayer aspect="as_relative_humidity" id="AS110"></mtc:mLayer>
+		<uom:Quantity name="ratio"></uom:Quantity>
+		<mtc:mLayer aspect="relative-humidity" id="AS110"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Temperature" optional="true">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="temperature"></uom:Quantity>
-		<mtc:mLayer aspect="as_thermodynamic_temperature" id="AS101"></mtc:mLayer>
+		<mtc:mLayer aspect="thermodynamic-temperature" id="AS101"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Pressure" optional="true">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="pressure"></uom:Quantity>
-		<mtc:mLayer aspect="as_pressure" id="AS14"></mtc:mLayer>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Thermodynamics"></mtc:Discipline>
 	<mtc:Definition>Measuring the ratio of the water vapor’s partial pressure divided by the saturation water vapor pressure allowed at a given temperature.</mtc:Definition>

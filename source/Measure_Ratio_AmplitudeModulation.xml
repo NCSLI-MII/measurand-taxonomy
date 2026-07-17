@@ -6,7 +6,7 @@
 	<mtc:Parameter name="Frequency" optional="false">
 		<mtc:Definition>Carrier Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Depth" optional="false">
 		<mtc:Definition>Amplitude Modulation Depth</mtc:Definition>
@@ -15,12 +15,12 @@
 	<mtc:Parameter name="Power" optional="true">
 		<mtc:Definition>Carrier Power Level</mtc:Definition>
 		<uom:Quantity name="power"></uom:Quantity>
-		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
+		<mtc:mLayer aspect="power" id="AS19"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Rate" optional="true">
 		<mtc:Definition>Modulation Rate Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Detector" optional="true">
 		<mtc:Definition>{+Peak, -Peak, Average, PeakToPeak, RMS}</mtc:Definition>
@@ -28,12 +28,12 @@
 	<mtc:Parameter name="HighPassFilter" optional="true">
 		<mtc:Definition>High Pass Filter Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="LowPassFilter" optional="true">
 		<mtc:Definition>Low Pass Filter Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="BandPassFilter" optional="true">
 		<mtc:Definition>Band Pass Filter Frequency or CCIT</mtc:Definition>

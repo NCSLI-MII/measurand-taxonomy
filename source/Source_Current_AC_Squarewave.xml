@@ -2,17 +2,17 @@
 <mtc:Taxon name="Source.Current.AC.Squarewave" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Current">
 		<uom:Quantity name="current"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-current" id="AS5"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Current" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="current"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-current" id="AS5"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Frequency" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name="Electrical"></mtc:Discipline>
 	<mtc:Definition>The process of sourcing a Squarewave Alternating Current signal. Knowing the shape of the waveform allows the system to make conversions from RMS to PeakToPeak.</mtc:Definition>

@@ -6,17 +6,17 @@
 	<mtc:Parameter name="Voltage" optional="false">
 		<mtc:Definition>Measurement Voltage (RMS)</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="VoltageReference" optional="false">
 		<mtc:Definition>Reference Voltage</mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Frequency" optional="false">
 		<mtc:Definition>Measurement Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Impedance" optional="false">
 		<mtc:Definition>Expected Impedance</mtc:Definition>

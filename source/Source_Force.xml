@@ -2,12 +2,12 @@
 <mtc:Taxon name="Source.Force" deprecated="false" replacement="" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database">
 	<mtc:Result name="Force">
 		<uom:Quantity name="force"></uom:Quantity>
-		<mtc:mLayer aspect="as_force" id="AS13"></mtc:mLayer>
+		<mtc:mLayer aspect="force" id="AS13"></mtc:mLayer>
 	</mtc:Result>
 	<mtc:Parameter name="Force" optional="false">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="force"></uom:Quantity>
-		<mtc:mLayer aspect="as_force" id="AS13"></mtc:mLayer>
+		<mtc:mLayer aspect="force" id="AS13"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Mode" optional="false">
 		<mtc:Definition>{Compression or Tension}</mtc:Definition>
@@ -21,12 +21,12 @@
 	<mtc:Parameter name="ExcitationVoltage" optional="true">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="voltage"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_potential_difference" id="AS22"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-potential" id="AS22"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Current" optional="true">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="current"></uom:Quantity>
-		<mtc:mLayer aspect="as_electric_current" id="AS5"></mtc:mLayer>
+		<mtc:mLayer aspect="electric-current" id="AS5"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="OutputSensitivity" optional="true">
 		<mtc:Definition></mtc:Definition>

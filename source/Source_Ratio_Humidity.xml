@@ -10,12 +10,12 @@
 	<mtc:Parameter name="DryAirVolume" optional="true">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="volume"></uom:Quantity>
-		<mtc:mLayer aspect="as_volume" id="AS37"></mtc:mLayer>
+		<mtc:mLayer aspect="volume" id="AS37"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="WaterVaporMass" optional="true">
 		<mtc:Definition></mtc:Definition>
 		<uom:Quantity name="mass"></uom:Quantity>
-		<mtc:mLayer aspect="as_mass" id="AS2"></mtc:mLayer>
+		<mtc:mLayer aspect="mass" id="AS2"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Discipline name=""></mtc:Discipline>
 	<mtc:Definition>The generation of humidity as a ratio of the total mass of the water vapor divided by the total volume of air. This is also called volumetric humidity.</mtc:Definition>

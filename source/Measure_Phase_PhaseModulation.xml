@@ -6,7 +6,7 @@
 	<mtc:Parameter name="Frequency" optional="false">
 		<mtc:Definition>Carrier Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Phase" optional="false">
 		<mtc:Definition>Phase Modulation Phase</mtc:Definition>
@@ -15,22 +15,22 @@
 	<mtc:Parameter name="Power" optional="true">
 		<mtc:Definition>Power of Carrier Signal</mtc:Definition>
 		<uom:Quantity name="power"></uom:Quantity>
-		<mtc:mLayer aspect="as_power" id="AS19"></mtc:mLayer>
+		<mtc:mLayer aspect="power" id="AS19"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="Rate" optional="true">
 		<mtc:Definition>Freqeuency Rate of phase modulated signal</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="HighPassFilter" optional="true">
 		<mtc:Definition>High Pass Filter Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="LowPassFilter" optional="true">
 		<mtc:Definition>Low Pass Filter Frequency</mtc:Definition>
 		<uom:Quantity name="frequency"></uom:Quantity>
-		<mtc:mLayer aspect="as_frequency" id="AS12"></mtc:mLayer>
+		<mtc:mLayer aspect="frequency" id="AS12"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="BandPassFilter" optional="true">
 		<mtc:Definition>Band Pass Filter Frequency of CCIT</mtc:Definition>
