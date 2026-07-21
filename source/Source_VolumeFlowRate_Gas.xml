@@ -44,6 +44,45 @@
 		<mtc:Definition>Relative volume change as a result of a pressure change for the reference gas.</mtc:Definition>
 		<mtc:mLayer aspect="null" id="AS1"></mtc:mLayer>
 	</mtc:Parameter>
+	<mtc:Parameter name="AmbientTemperature" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="temperature"></uom:Quantity>
+		<mtc:mLayer aspect="thermodynamic-temperature" id="AS101"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="AmbientPressure" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="pressure:absolute"></uom:Quantity>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="AmbientRelativeHumidity" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="relative-humidity"></uom:Quantity>
+		<mtc:mLayer aspect="relative-humidity" id="AS110"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="OutletPressure" optional="false">
+		<mtc:Definition>Outlet pressure ambient or otherwise.</mtc:Definition>
+		<uom:Quantity name="pressure:absolute"></uom:Quantity>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReynoldsNumber" optional="false">
+		<mtc:Definition>Dimensionless quantity that characterizes the degree of laminar versus turbulent flow.</mtc:Definition>
+		<mtc:mLayer aspect="null" id="AS1"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="GasVelocity" optional="false">
+		<mtc:Definition>Speed of the gas through the measurement area.</mtc:Definition>
+		<uom:Quantity name="speed"></uom:Quantity>
+		<mtc:mLayer aspect="speed" id="AS38"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="InnerDiameter" optional="false">
+		<mtc:Definition>Inner diameter of the pipe used in the measurement.</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="DynamicViscosity" optional="false">
+		<mtc:Definition>Fluid internal resistance to flow.</mtc:Definition>
+		<uom:Quantity name="dynamic-viscosity"></uom:Quantity>
+		<mtc:mLayer aspect="dynamic-viscosity" id="AS107"></mtc:mLayer>
+	</mtc:Parameter>
 	<mtc:Discipline name=""></mtc:Discipline>
 	<mtc:Definition>This process sources a reference volume flow rate of gas for calibrating gas-flow meters. The instantaneous volumetric flow rate q_V equals dV/dt, sometimes estimated as ∆V/∆t using the total volume ∆V flowing through a defined surface in time ∆t.</mtc:Definition>
 </mtc:Taxon>
