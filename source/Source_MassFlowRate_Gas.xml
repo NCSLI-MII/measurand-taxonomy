@@ -16,7 +16,7 @@
 	</mtc:Parameter>
 	<mtc:Parameter name="Pressure" optional="true">
             <mtc:Definition>Pressure of the gas used during the measurement</mtc:Definition>
-            <uom:Quantity name="pressure:differential"></uom:Quantity>
+            <uom:Quantity name="pressure:absolute"></uom:Quantity>
             <mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="RelativeHumidity " optional="true">
@@ -35,7 +35,7 @@
 	</mtc:Parameter>
 	<mtc:Parameter name="ReferencePressure" optional="true">
             <mtc:Definition>Reference pressure condition to or from which to correct the flow rate</mtc:Definition>
-            <uom:Quantity name="pressure:differential"></uom:Quantity>
+            <uom:Quantity name="pressure:absolute"></uom:Quantity>
             <mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="ReferenceRelativeHumidity" optional="true">
@@ -64,7 +64,7 @@
 	</mtc:Parameter>
 	<mtc:Parameter name="OutletPressure" optional="true">
             <mtc:Definition>Outlet pressure ambient or otherwise</mtc:Definition>
-            <uom:Quantity name="pressure:differential"></uom:Quantity>
+            <uom:Quantity name="pressure:absolute"></uom:Quantity>
             <mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
 	</mtc:Parameter>
 	<mtc:Parameter name="ReynoldsNumber" optional="true">
