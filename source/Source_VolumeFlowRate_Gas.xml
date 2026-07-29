@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mtc:Taxon name="Source.VolumeFlowRate.Gas" deprecated="false" replacement="" xmlns:uom="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/UOM_Database" xmlns:mtc="https://cls-schemas.s3.us-west-1.amazonaws.com/MII/MeasurandTaxonomyCatalog">
+	<mtc:Result name="VolumeFlowRate"></mtc:Result>
+	<mtc:Parameter name="VolumeFlowRate" optional="false">
+		<mtc:Definition>Volume of substance passing through a specific cross-sectional area.</mtc:Definition>
+		<uom:Quantity name="flow-volume"></uom:Quantity>
+		<mtc:mLayer aspect="volumetric-flow-rate" id="AS79"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Temperature" optional="false">
+		<mtc:Definition>Temperature of the gas used during the measurement.</mtc:Definition>
+		<uom:Quantity name="temperature"></uom:Quantity>
+		<mtc:mLayer aspect="thermodynamic-temperature" id="AS101"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Pressure" optional="false">
+		<mtc:Definition>Pressure of the gas used during the measurement.</mtc:Definition>
+		<uom:Quantity name="pressure:absolute"></uom:Quantity>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="RelativeHumidity " optional="false">
+		<mtc:Definition>Relative humidity (water content) of the gas used during measurement, mostly applicable to ambient air as the medium.</mtc:Definition>
+		<uom:Quantity name="relative-humidity"></uom:Quantity>
+		<mtc:mLayer aspect="relative-humidity" id="AS110"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="Compressibility" optional="false">
+		<mtc:Definition>Relative volume change as a result of a pressure change of the gas used.</mtc:Definition>
+		<mtc:mLayer aspect="null" id="AS1"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReferenceTemperature" optional="false">
+		<mtc:Definition>Reference temperature condition to or from which to correct the flow rate.</mtc:Definition>
+		<uom:Quantity name="temperature"></uom:Quantity>
+		<mtc:mLayer aspect="thermodynamic-temperature" id="AS101"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReferencePressure" optional="false">
+		<mtc:Definition>Reference pressure condition to or from which to correct the flow rate.</mtc:Definition>
+		<uom:Quantity name="pressure:absolute"></uom:Quantity>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReferenceRelativeHumidity" optional="false">
+		<mtc:Definition>Reference Relative Humidity: condition to or from which to correct the flow rate</mtc:Definition>
+		<uom:Quantity name="relative-humidity"></uom:Quantity>
+		<mtc:mLayer aspect="relative-humidity" id="AS110"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReferenceCompressibility" optional="false">
+		<mtc:Definition>Relative volume change as a result of a pressure change for the reference gas.</mtc:Definition>
+		<mtc:mLayer aspect="null" id="AS1"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="AmbientTemperature" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="temperature"></uom:Quantity>
+		<mtc:mLayer aspect="thermodynamic-temperature" id="AS101"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="AmbientPressure" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="pressure:absolute"></uom:Quantity>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="AmbientRelativeHumidity" optional="false">
+		<mtc:Definition></mtc:Definition>
+		<uom:Quantity name="relative-humidity"></uom:Quantity>
+		<mtc:mLayer aspect="relative-humidity" id="AS110"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="OutletPressure" optional="false">
+		<mtc:Definition>Outlet pressure ambient or otherwise.</mtc:Definition>
+		<uom:Quantity name="pressure:absolute"></uom:Quantity>
+		<mtc:mLayer aspect="pressure" id="AS14"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="ReynoldsNumber" optional="false">
+		<mtc:Definition>Dimensionless quantity that characterizes the degree of laminar versus turbulent flow.</mtc:Definition>
+		<mtc:mLayer aspect="null" id="AS1"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="GasVelocity" optional="false">
+		<mtc:Definition>Speed of the gas through the measurement area.</mtc:Definition>
+		<uom:Quantity name="speed"></uom:Quantity>
+		<mtc:mLayer aspect="speed" id="AS38"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="GasSpecies" optional="true">
+            <mtc:Definition>Species of source gas for flow calibrations</mtc:Definition>
+            <mtc:Property name="GasSpecies" id="propertyIDx9r4">
+                <mtc:Definition>Identifiers for elements, compounds, mixtures for flow calibrations</mtc:Definition> 
+                <mtc:NominalValues>Air He Ar N2 CO2 CH4 C3H8 C4H10 H2S CO H2 Cl2</mtc:NominalValues>
+                <mtc:ExternalReferences>
+                    <mtc:Reference>
+                        <mtc:CategoryTag> 
+                            <mtc:name>"CAS Registry"</mtc:name>
+                            <mtc:value>"CAS Common Chemistry"</mtc:value>
+                        </mtc:CategoryTag>
+                        <mtc:ReferenceUrl> 
+                            <mtc:name>"CAS Common Chemistry"</mtc:name> 
+                            <mtc:url>"https://commonchemistry.cas.org/"</mtc:url>
+                        </mtc:ReferenceUrl>
+                    </mtc:Reference>
+                </mtc:ExternalReferences>
+            </mtc:Property>
+	</mtc:Parameter>
+	<mtc:Parameter name="InnerDiameter" optional="false">
+		<mtc:Definition>Inner diameter of the pipe used in the measurement.</mtc:Definition>
+		<uom:Quantity name="length"></uom:Quantity>
+		<mtc:mLayer aspect="length" id="AS3"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Parameter name="DynamicViscosity" optional="false">
+		<mtc:Definition>Fluid internal resistance to flow.</mtc:Definition>
+		<uom:Quantity name="dynamic-viscosity"></uom:Quantity>
+		<mtc:mLayer aspect="dynamic-viscosity" id="AS107"></mtc:mLayer>
+	</mtc:Parameter>
+	<mtc:Discipline name=""></mtc:Discipline>
+	<mtc:Definition>This process sources a reference volume flow rate of gas for calibrating gas-flow meters. The instantaneous volumetric flow rate q_V equals dV/dt, sometimes estimated as ∆V/∆t using the total volume ∆V flowing through a defined surface in time ∆t.</mtc:Definition>
+</mtc:Taxon>
